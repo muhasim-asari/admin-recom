@@ -1,0 +1,39 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "full_name": "Galen Slixby",
+      "email": "gslixby0@abc.net.au",
+      "role": "Admin",
+      "avatar": ""
+    },
+    {
+      "id": 2,
+      "full_name": "Halsey Redmore",
+      "email": "hredmore1@imgur.com",
+      "role": "Operator",
+      "avatar": ""
+    },
+    {
+      "id": 3,
+      "full_name": "Maggy Hurran",
+      "email": "mhurran4@yahoo.co.jp",
+      "role": "Operator",
+      "avatar": ""
+    },
+    {
+      "id": 4,
+      "full_name": "Marjory Sicely",
+      "email": "msicely2@who.int",
+      "role": "Admin",
+      "avatar": ""
+    },
+    {
+      "id": 5,
+      "full_name": "Cyrill Risby",
+      "email": "crisby3@wordpress.com",
+      "role": "Operator",
+      "avatar": ""
+    }
+  ]
+}
