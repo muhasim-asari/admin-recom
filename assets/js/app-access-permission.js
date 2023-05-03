@@ -70,7 +70,7 @@ $(function () {
       },
       buttons: [
         {
-          text: "Add Permission",
+          text: '<i class="mdi mdi-plus me-0 me-sm-1"></i><span class="d-none d-sm-inline-block">Add Hotel</span>',
           className: "add-new btn btn-primary mb-3 mb-md-0",
           attr: {
             "data-bs-toggle": "modal",
