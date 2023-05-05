@@ -4,7 +4,7 @@ $(function () {
   var e,
     s = $(".datatables-users"),
     i = $(".select2"),
-    r = "user-update.html",
+    r = "manage-user-update.html",
     o = {
       1: { title: "Pending", class: "bg-label-warning" },
       2: { title: "Active", class: "bg-label-success" },
@@ -16,13 +16,12 @@ $(function () {
       .select2({ placeholder: "Select Country", dropdownParent: i.parent() }),
     s.length &&
       (e = s.DataTable({
-        ajax: assetsPath + "json/user-list-2.json",
+        ajax: assetsPath + "json/user-list.json",
         columns: [
           { data: "" },
           { data: "full_name" },
           { data: "full_name" },
           { data: "email" },
-          { data: "role" },
           { data: "action" },
         ],
         columnDefs: [
@@ -91,32 +90,13 @@ $(function () {
             },
           },
           {
-            targets: 4,
-            render: function (e, t, a, n) {
-              a = a.role;
-              return (
-                "<span class='text-truncate d-flex align-items-center'>" +
-                {
-                  Admin:
-                    '<i class="mdi mdi-laptop mdi-20px text-danger me-2"></i>',
-                  Operator:
-                    '<i class="mdi mdi-cog-outline mdi-20px text-warning me-2"></i>',
-                }[a] +
-                a +
-                "</span>"
-              );
-            },
-          },
-          {
             targets: -1,
             title: "Actions",
             searchable: !1,
             orderable: !1,
             render: function (e, t, a, n) {
               return (
-                '<a href="' +
-                r +
-                '" class="me-2"><i class="mdi mdi-pencil-outline me-2"></i></a><a href="javascript:;" class="text-danger" data-bs-target="#deleteUserModal" data-bs-toggle="modal" data-bs-dismiss="modal"><i class="mdi mdi-delete-outline"></i></a></div>'
+                '<a href="javascript:;" class="me-2" data-bs-target="#changePasswordModal" data-bs-toggle="modal" data-bs-dismiss="modal"><span class="btn btn-outline-dark waves-effect me-2">Change Password</span></a><a href="' + r + '" class="me-2"><i class="mdi mdi-pencil-outline me-2"></i></a><a href="javascript:;" class="text-danger" data-bs-target="#deleteUserModal" data-bs-toggle="modal" data-bs-dismiss="modal"><i class="mdi mdi-delete-outline"></i></a></div>'
               );
             },
           },
@@ -169,7 +149,7 @@ $(function () {
         },
         initComplete: function () {
           this.api()
-            .columns(4)
+            .columns(3)
             .every(function () {
               var t = this,
                 a = $(

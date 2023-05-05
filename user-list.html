@@ -228,7 +228,7 @@
               </a>
             </li>
             <li class="menu-item">
-              <a href="modal-examples.html" class="menu-link">
+              <a href="/" class="menu-link">
                 <i class="menu-icon tf-icons mdi mdi-vector-arrange-below"></i>
                 <div data-i18n="Campaign">Campaign</div>
               </a>
@@ -405,7 +405,7 @@
                   </table>
                 </div>
 
-                <!-- Add Permission Modal -->
+                <!-- Add User Modal -->
                 <div
                   class="modal fade"
                   id="addUserModal"
@@ -477,9 +477,7 @@
                             </div>
                           </div>
                           <div class="form-input-option mb-4">
-                            <small class="text-light fw-semibold"
-                              >User Access</small
-                            >
+                            <h6>User Access</h6>
                             <div class="add-user-permission mt-3">
                               <div class="row">
                                 <div class="col-md-6">
@@ -492,7 +490,7 @@
                                       checked=""
                                     />
                                     <label class="form-check-label" for="selectAll"
-                                      >Select All</label
+                                      >Uncheck All</label
                                     >
                                   </div>
                                   <div class="form-check">
@@ -621,7 +619,56 @@
                     </div>
                   </div>
                 </div>
-                <!--/ Add Permission Modal -->
+                <!--/ Add User Modal -->
+
+                <!-- Delete User Modal -->
+                <div
+                  class="modal fade"
+                  id="deleteUserModal"
+                  tabindex="-1"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content p-3 p-md-5">
+                      <button
+                        type="button"
+                        class="btn-close btn-pinned"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                      <div class="modal-body p-md-0">
+                        <div class="text-center mb-4">
+                          <h3 class="mb-2 pb-1">Delete Confirmation</h3>
+                          <p>Are you Sure to delete this user?</p>
+                        </div>
+                        <form
+                          class="delete-new-user pt-0 delete-record"
+                          id="deleteUserForm"
+                          onsubmit=""
+                        >
+
+                          <div class="col-12 text-center demo-vertical-spacing">
+                            <button
+                              type="submit"
+                              class="btn btn-primary me-sm-3 me-1 delete-record"
+                            >
+                              Yes, Im Sure
+                            </button>
+                            <button
+                              type="reset"
+                              class="btn btn-outline-secondary"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            >
+                              No, Thanks
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--/ Delete User Modal -->
 
                 <!-- Offcanvas to add new user -->
                 <div

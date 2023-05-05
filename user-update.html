@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
+
 <html
   lang="en"
   class="light-style layout-navbar-fixed layout-menu-fixed"
@@ -14,7 +15,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Hotel List - CRM</title>
+    <title>User List - CRM</title>
 
     <meta
       name="description"
@@ -170,7 +171,7 @@
             <li class="menu-header fw-light mt-4">
               <span class="menu-header-text">Main Menu</span>
             </li>
-            <li class="menu-item">
+            <li class="menu-item active">
               <a href="/user-list.html" class="menu-link">
                 <i
                   class="menu-icon tf-icons mdi mdi-account-multiple-outline"
@@ -178,7 +179,7 @@
                 <div data-i18n="Master User">Master User</div>
               </a>
             </li>
-            <li class="menu-item active">
+            <li class="menu-item">
               <a href="/hotel-list.html" class="menu-link">
                 <i class="menu-icon tf-icons mdi mdi-bed-outline"></i>
                 <div data-i18n="Master Hotel">Master Hotel</div>
@@ -373,263 +374,219 @@
           </nav>
 
           <!-- / Navbar -->
-
           <!-- Content wrapper -->
           <div class="content-wrapper">
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
-              <!-- Hotel Table -->
-              <div class="card">
-                <div class="card-datatable table-responsive">
-                  <table class="datatables-hotels table">
-                    <thead class="table-light">
-                      <tr>
-                        <th></th>
-                        <th></th>
-                        <th>Hotel Code</th>
-                        <th>Area (City)</th>
-                        <th>Hotel Name</th>
-                        <th>Users</th>
-                        <th>Actions</th>
-                      </tr>
-                    </thead>
-                  </table>
-                </div>
-              </div>
-              <!--/ Hotel Table -->
+              <h4 class="fw-bold py-3 mb-4">
+                <span class="text-muted fw-light">Master User/</span> Marjory Sicely
+              </h4>
 
-              <!-- Modal -->
-              <!-- Add Hotel Modal -->
-              <div
-                class="modal fade"
-                id="addHotelModal"
-                tabindex="-1"
-                aria-hidden="true"
-              >
-                <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content p-3 p-md-5">
-                    <button
-                      type="button"
-                      class="btn-close btn-pinned"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                    <div class="modal-body p-md-0">
-                      <div class="text-center mb-4">
-                        <h3 class="mb-2 pb-1">Add New Hotel</h3>
+              <!-- Multi Column with Form Separator -->
+              <div class="card mb-4">
+                <form class="card-body">
+                  <div class="row g-4">
+                    <div class="col-md-6">
+                      <div class="form-floating form-floating-outline">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="add-user-fullname"
+                          placeholder="John Doe"
+                          name="userFullname"
+                          value="Marjory Sicely"
+                          aria-label="John Doe"
+                        />
+                        <label for="add-user-fullname">Full Name</label>
                       </div>
-                      <form
-                        class="add-new-hotel pt-0"
-                        id="addNewHotelForm"
-                        onsubmit=""
-                      >
-                        <div class="form-floating form-floating-outline mb-4">
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="add-hotel-code"
-                            placeholder="33-6756KKM"
-                            name="hotelCode"
-                            aria-label="33-6756KKM"
-                          />
-                          <label for="add-hotel-code">Hotel Code</label>
-                        </div>
-                        <div class="form-floating form-floating-outline mb-4">
+                    </div>
+                    <div class="col-md-6">
+                      <div class="input-group input-group-merge">
+                        <div class="form-floating form-floating-outline">
                           <select id="user-role" class="form-select">
-                            <option value="solo">Surakarta (Solo)</option>
-                            <option value="yogyakarta">Yogyakarta</option>
-                            <option value="bandung">Bandung</option>
-                            <option value="jakarta">Jakarta</option>
-                            <option value="surabaya">Surabaya</option>
-                            <option value="malang">Malang</option>
+                            <option value="admin">Admin</option>
+                            <option value="operator">Operator</option>
                           </select>
-                          <label for="user-role">Choose Area (City)</label>
+                          <label for="user-role">Choose Role</label>
                         </div>
-                        <div class="form-floating form-floating-outline mb-4">
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="add-hotel-name"
-                            placeholder="Azana Palace"
-                            name="hotelName"
-                            aria-label="Azana Palace"
-                          />
-                          <label for="add-hotel-name">Hotel Name</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-password-toggle">
+                        <div class="input-group input-group-merge">
+                          <div class="form-floating form-floating-outline">
+                            <input
+                              type="text"
+                              id="add-user-email"
+                              class="form-control"
+                              placeholder="john.doe@example.com"
+                              aria-label="john.doe@example.com"
+                              name="userEmail"
+                              value="msicely2@who.int"
+                            />
+                            <label for="add-user-email">Email</label>
+                          </div>
                         </div>
-                        <div class="form-input-option mb-4">
-                          <div class="add-hotel-permission mt-3">
-                            <div class="row">
-                              <div class="col-md-6">
-                                <div class="form-check">
-                                  <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    data-value="customer"
-                                    id="createHotelAdmin"
-                                    checked=""
-                                  />
-                                  <label
-                                    class="form-check-label"
-                                    for="createHotelAdmin"
-                                    >Create Hotel Admin</label
-                                  >
-                                </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-password-toggle">
+                        <div class="input-group input-group-merge">
+                          <div class="form-floating form-floating-outline">
+                            <input
+                              type="password"
+                              id="multicol-confirm-password"
+                              class="form-control"
+                              placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+                              aria-describedby="multicol-confirm-password2"
+                            />
+                            <label for="multicol-confirm-password"
+                              >Change Password</label
+                            >
+                          </div>
+                          <span
+                            class="input-group-text cursor-pointer"
+                            id="multicol-confirm-password2"
+                            ><i class="mdi mdi-eye-off-outline"></i
+                          ></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-input-option mb-4">
+                        <h6>User Access</h6>
+                        <div class="add-user-permission mt-3">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input select-all"
+                                  type="checkbox"
+                                  id="selectAll"
+                                  data-value="all"
+                                  checked=""
+                                />
+                                <label class="form-check-label" for="selectAll"
+                                  >Uncheck All</label
+                                >
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input input-filter"
+                                  type="checkbox"
+                                  data-value="dashboard"
+                                  id="selectDashboard"
+                                  checked=""
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="selectDashboard"
+                                  >Dashboard</label
+                                >
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input input-filter"
+                                  type="checkbox"
+                                  data-value="user"
+                                  id="selectMasterUser"
+                                  checked=""
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="selectMasterUser"
+                                  >Master User</label
+                                >
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input input-filter"
+                                  type="checkbox"
+                                  data-value="hotel"
+                                  id="selectMasterHotel"
+                                  checked=""
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="selectMasterHotel"
+                                  >Master Hotel</label
+                                >
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input input-filter"
+                                  type="checkbox"
+                                  data-value="customer"
+                                  id="selectMasterCustomer"
+                                  checked=""
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="selectMasterCustomer"
+                                  >Master Customer</label
+                                >
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input input-filter"
+                                  type="checkbox"
+                                  data-value="template"
+                                  id="selectTemplate"
+                                  checked=""
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="selectTemplate"
+                                  >Template</label
+                                >
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input input-filter"
+                                  type="checkbox"
+                                  data-value="calendar"
+                                  id="selectCalendar"
+                                  checked=""
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="selectCalendar"
+                                  >Calendar</label
+                                >
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input input-filter"
+                                  type="checkbox"
+                                  data-value="campaign"
+                                  id="selectCampaign"
+                                  checked=""
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="selectCampaign"
+                                  >Campaign</label
+                                >
                               </div>
                             </div>
                           </div>
                         </div>
-
-                        <div class="col-12 text-center demo-vertical-spacing">
-                          <button
-                            type="submit"
-                            class="btn btn-primary me-sm-3 me-1"
-                          >
-                            Create Hotel
-                          </button>
-                          <button
-                            type="reset"
-                            class="btn btn-outline-secondary"
-                            data-bs-dismiss="modal"
-                            aria-label="Close"
-                          >
-                            Discard
-                          </button>
-                        </div>
-                      </form>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <!--/ Add Hotel Modal -->
-
-              <!-- Delete User Modal -->
-              <div
-                class="modal fade"
-                id="deleteUserModal"
-                tabindex="-1"
-                aria-hidden="true"
-              >
-                <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content p-3 p-md-5">
-                    <button
-                      type="button"
-                      class="btn-close btn-pinned"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                    <div class="modal-body p-md-0">
-                      <div class="text-center mb-4">
-                        <h3 class="mb-2 pb-1">Delete Confirmation</h3>
-                        <p>Are you Sure to delete this hotel?</p>
-                      </div>
-                      <form
-                        class="delete-new-user pt-0 delete-record"
-                        id="deleteUserForm"
-                        onsubmit=""
-                      >
-                        <div class="col-12 text-center demo-vertical-spacing">
-                          <button
-                            type="submit"
-                            class="btn btn-primary me-sm-3 me-1 delete-record"
-                          >
-                            Yes, Im Sure
-                          </button>
-                          <button
-                            type="reset"
-                            class="btn btn-outline-secondary"
-                            data-bs-dismiss="modal"
-                            aria-label="Close"
-                          >
-                            No, Thanks
-                          </button>
-                        </div>
-                      </form>
-                    </div>
+                  <div class="pt-4">
+                    <button type="submit" class="btn btn-primary me-sm-3 me-1">
+                      Save Changes
+                    </button>
+                    <button type="reset" class="btn btn-label-secondary">
+                      Cancel
+                    </button>
                   </div>
-                </div>
+                </form>
               </div>
-              <!--/ Delete User Modal -->
-
-              <!-- Edit Hotel Modal -->
-              <div
-                class="modal fade"
-                id="editPermissionModal"
-                tabindex="-1"
-                aria-hidden="true"
-              >
-                <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content p-3 p-md-5">
-                    <button
-                      type="button"
-                      class="btn-close btn-pinned"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                    <div class="modal-body p-md-0">
-                      <div class="text-center mb-4">
-                        <h3 class="mb-2 pb-1">Edit Permission</h3>
-                        <p>Edit permission as per your requirements.</p>
-                      </div>
-                      <div class="alert alert-warning" role="alert">
-                        <h6 class="alert-heading mb-2">Warning</h6>
-                        <p class="mb-0">
-                          By editing the permission name, you might break the
-                          system permissions functionality. Please ensure you're
-                          absolutely certain before proceeding.
-                        </p>
-                      </div>
-                      <form
-                        id="editPermissionForm"
-                        class="row pt-2"
-                        onsubmit="return false"
-                      >
-                        <div class="col-sm-9 mb-3">
-                          <div class="form-floating form-floating-outline">
-                            <input
-                              type="text"
-                              id="editPermissionName"
-                              name="editPermissionName"
-                              class="form-control"
-                              placeholder="Permission Name"
-                              tabindex="-1"
-                            />
-                            <label for="editPermissionName"
-                              >Permission Name</label
-                            >
-                          </div>
-                        </div>
-                        <div class="col-sm-3 mb-3">
-                          <button
-                            type="submit"
-                            class="btn btn-primary mt-1 mt-sm-0"
-                          >
-                            Update
-                          </button>
-                        </div>
-                        <div class="col-12">
-                          <div class="form-check">
-                            <input
-                              class="form-check-input"
-                              type="checkbox"
-                              id="editCorePermission"
-                            />
-                            <label
-                              class="form-check-label"
-                              for="editCorePermission"
-                            >
-                              Set as core permission
-                            </label>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!--/ Edit Hotel Modal -->
-
-              <!-- /Modal -->
             </div>
             <!-- / Content -->
 
@@ -677,9 +634,7 @@
     <script src="\assets\js\main.js"></script>
 
     <!-- Page JS -->
-    <script src="\assets\js\app-hotel-list-2.js"></script>
-    <script src="\assets\js\modal-add-permission.js"></script>
-    <script src="\assets\js\modal-edit-permission.js"></script>
+    <script src="\assets\js\app-user-list.js"></script>
   </body>
 </html>
 

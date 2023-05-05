@@ -2,10 +2,10 @@
 $(function () {
   var e,
     t = $(".datatables-hotels"),
-    l = "app-user-list.html";
+    l = "hotel-update.html";
   t.length &&
     (e = t.DataTable({
-      ajax: assetsPath + "json/permissions-list.json",
+      ajax: assetsPath + "json/hotel-list-2.json",
       columns: [
         { data: "" },
         { data: "code_hotel" },
@@ -57,7 +57,9 @@ $(function () {
           searchable: !1,
           orderable: !1,
           render: function (e, t, a, n) {
-            return '<span class="text-nowrap"><button class="btn btn-sm btn-icon btn-text-secondary rounded-pill btn-icon me-2" data-bs-target="#editPermissionModal" data-bs-toggle="modal" data-bs-dismiss="modal"><i class="mdi mdi-pencil-outline mdi-20px"></i></button><button class="btn btn-sm btn-icon btn-text-secondary rounded-pill btn-icon delete-record"><i class="mdi mdi-delete-outline mdi-20px"></i></button></span>';
+            return (
+              '<a href="manage-user-list.html" class="me-2"><span class="btn btn-outline-dark waves-effect me-2">Manage User</span></a><a href="' + l + '" class="me-2"><i class="mdi mdi-pencil-outline me-2"></i></a><a href="javascript:;" class="text-danger" data-bs-target="#deleteUserModal" data-bs-toggle="modal" data-bs-dismiss="modal"><i class="mdi mdi-delete-outline"></i></a></div>'
+            );
           },
         },
       ],
@@ -74,7 +76,7 @@ $(function () {
           className: "add-new btn btn-primary mb-3 mb-md-0",
           attr: {
             "data-bs-toggle": "modal",
-            "data-bs-target": "#addPermissionModal",
+            "data-bs-target": "#addHotelModal",
           },
           init: function (e, t, a) {
             $(t).removeClass("btn-secondary");
@@ -113,7 +115,7 @@ $(function () {
           .every(function () {
             var t = this,
               a = $(
-                '<select id="UserRole" class="form-select text-capitalize"><option value=""> Select Role </option></select>'
+                '<select id="area" class="form-select text-capitalize"><option value=""> All Area (City) </option></select>'
               )
                 .appendTo(".user_role")
                 .on("change", function () {
