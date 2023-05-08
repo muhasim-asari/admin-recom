@@ -48,7 +48,7 @@ $(function () {
         {
           targets: 5,
           render: function (e, t, a, n) {
-            return '<span class="text-nowrap">' + a.users + "</span>";
+            return '<a href="manage-user-list.html" class="text-heading text-truncate"><span class="text-nowrap"><u>' + a.users + "</u></span></a>";
           },
         },
         {
@@ -58,7 +58,7 @@ $(function () {
           orderable: !1,
           render: function (e, t, a, n) {
             return (
-              '<a href="manage-user-list.html" class="me-2"><span class="btn btn-outline-dark waves-effect me-2">Manage User</span></a><a href="' + l + '" class="me-2"><i class="mdi mdi-pencil-outline me-2"></i></a><a href="javascript:;" class="text-danger" data-bs-target="#deleteUserModal" data-bs-toggle="modal" data-bs-dismiss="modal"><i class="mdi mdi-delete-outline"></i></a></div>'
+              '<a href="' + l + '" class="me-2"><i class="mdi mdi-pencil-outline me-2"></i><span>Edit</span></a><a href="javascript:;" class="text-danger delete-record"><i class="mdi mdi-delete-outline"></i><span>Delete</span></a></div>'
             );
           },
         },
@@ -73,14 +73,10 @@ $(function () {
       buttons: [
         {
           text: '<i class="mdi mdi-plus me-0 me-sm-1"></i><span class="d-none d-sm-inline-block">Add Hotel</span>',
-          className: "add-new btn btn-primary mb-3 mb-md-0",
-          attr: {
-            "data-bs-toggle": "modal",
-            "data-bs-target": "#addHotelModal",
-          },
-          init: function (e, t, a) {
-            $(t).removeClass("btn-secondary");
-          },
+            className: "add-new btn btn-primary mx-3",
+            action: function() {
+              window.location.href = './create-hotel.html';
+            }
         },
       ],
       responsive: {
@@ -117,7 +113,7 @@ $(function () {
               a = $(
                 '<select id="area" class="form-select text-capitalize"><option value=""> All Area (City) </option></select>'
               )
-                .appendTo(".user_role")
+                .appendTo(".role")
                 .on("change", function () {
                   var e = $.fn.dataTable.util.escapeRegex($(this).val());
                   t.search(e ? "^" + e + "$" : "", !0, !1).draw();
@@ -137,7 +133,7 @@ $(function () {
           });
       },
     })),
-    $(".datatables-permissions tbody").on(
+    $(".datatables-hotels tbody").on(
       "click",
       ".delete-record",
       function () {

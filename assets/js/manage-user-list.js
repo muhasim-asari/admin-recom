@@ -2,7 +2,7 @@
 $(function () {
   let t, a;
   var e,
-    s = $(".datatables-users"),
+    s = $(".datatables-manage-users"),
     i = $(".select2"),
     r = "manage-user-update.html",
     o = {
@@ -96,7 +96,7 @@ $(function () {
             orderable: !1,
             render: function (e, t, a, n) {
               return (
-                '<a href="javascript:;" class="me-2" data-bs-target="#changePasswordModal" data-bs-toggle="modal" data-bs-dismiss="modal"><span class="btn btn-outline-dark waves-effect me-2">Change Password</span></a><a href="' + r + '" class="me-2"><i class="mdi mdi-pencil-outline me-2"></i></a><a href="javascript:;" class="text-danger" data-bs-target="#deleteUserModal" data-bs-toggle="modal" data-bs-dismiss="modal"><i class="mdi mdi-delete-outline"></i></a></div>'
+                '<a href="' + r + '" class="me-2"><i class="mdi mdi-pencil-outline me-2"></i><span>Edit</span></a><a href="javascript:;" class="text-danger delete-record"><i class="mdi mdi-delete-outline"></i><span>Delete</span></a></div>'
               );
             },
           },
@@ -112,13 +112,9 @@ $(function () {
           {
             text: '<i class="mdi mdi-plus me-0 me-sm-1"></i><span class="d-none d-sm-inline-block">Add User</span>',
             className: "add-new btn btn-primary mx-3",
-            attr: {
-              "data-bs-toggle": "modal",
-              "data-bs-target": "#addUserModal",
-            },
-            init: function (e, t, a) {
-              $(t).removeClass("btn-secondary");
-            },
+            action: function() {
+              window.location.href = './create-manage-user.html';
+            }
           },
         ],
         responsive: {
@@ -169,7 +165,7 @@ $(function () {
             })
         },
       })),
-    $(".datatables-users tbody").on("click", ".delete-record", function () {
+    $(".datatables-manage-users tbody").on("click", ".delete-record", function () {
       e.row($(this).parents("tr")).remove().draw();
     });
 }),
