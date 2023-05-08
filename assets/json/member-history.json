@@ -1,0 +1,84 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "check_in": "2023-07-10",
+      "night_stays": 2,
+      "check_out": "2023-07-12",
+      "hotel": "Ritz Carlton Bali",
+      "area_city": "Bali"
+    },
+    {
+      "id": 2,
+      "check_in": "2023-08-15",
+      "night_stays": 4,
+      "check_out": "2023-08-19",
+      "hotel": "Mandarin Oriental Jakarta",
+      "area_city": "Jakarta"
+    },
+    {
+      "id": 3,
+      "check_in": "2023-09-01",
+      "night_stays": 1,
+      "check_out": "2023-09-02",
+      "hotel": "Hilton Bandung",
+      "area_city": "Bandung"
+    },
+    {
+      "id": 4,
+      "check_in": "2023-10-05",
+      "night_stays": 3,
+      "check_out": "2023-10-08",
+      "hotel": "St. Regis Bali Resort",
+      "area_city": "Bali"
+    },
+    {
+      "id": 5,
+      "check_in": "2023-11-20",
+      "night_stays": 5,
+      "check_out": "2023-11-25",
+      "hotel": "Grand Mercure Yogyakarta",
+      "area_city": "Yogyakarta"
+    },
+    {
+      "id": 6,
+      "check_in": "2023-06-10",
+      "night_stays": 2,
+      "check_out": "2023-06-12",
+      "hotel": "The Westin Resort Nusa Dua, Bali",
+      "area_city": "Bali"
+    },
+    {
+      "id": 7,
+      "check_in": "2023-07-01",
+      "night_stays": 4,
+      "check_out": "2023-07-05",
+      "hotel": "The St. Regis Bali Resort",
+      "area_city": "Bali"
+    },
+    {
+      "id": 8,
+      "check_in": "2023-08-15",
+      "night_stays": 1,
+      "check_out": "2023-08-16",
+      "hotel": "Grand Mercure Jakarta Kemayoran",
+      "area_city": "Jakarta"
+    },
+    {
+      "id": 9,
+      "check_in": "2023-09-03",
+      "night_stays": 2,
+      "check_out": "2023-09-05",
+      "hotel": "Hilton Bandung",
+      "area_city": "Bandung"
+    },
+    {
+      "id": 10,
+      "check_in": "2023-10-20",
+      "night_stays": 3,
+      "check_out": "2023-10-23",
+      "hotel": "The Trans Luxury Hotel Bandung",
+      "area_city": "Bandung"
+    }
+  ]
+}

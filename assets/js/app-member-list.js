@@ -1,18 +1,18 @@
 "use strict";
 $(function () {
   var e,
-    t = $(".datatables-hotels"),
-    l = "hotel-update.html";
+    t = $(".datatables-member"),
+    l = "member-update.html";
   t.length &&
     (e = t.DataTable({
-      ajax: assetsPath + "json/hotel-list-2.json",
+      ajax: assetsPath + "json/member-list.json",
       columns: [
         { data: "" },
-        { data: "code_hotel" },
-        { data: "code_hotel" },
-        { data: "area" },
-        { data: "hotel_name" },
-        { data: "users" },
+        { data: "full_name" },
+        { data: "full_name" },
+        { data: "email" },
+        { data: "last_checkin" },
+        { data: "place" },
         { data: "" },
       ],
       columnDefs: [
@@ -23,32 +23,32 @@ $(function () {
           responsivePriority: 2,
           targets: 0,
           render: function (e, t, a, n) {
-            return "";
+            return '<span>Detail</span>';
           },
         },
         { targets: 1, searchable: !1, visible: !1 },
         {
           targets: 2,
           render: function (e, t, a, n) {
-            return '<span class="text-nowrap">' + a.code_hotel + "</span>";
+            return '<span class="text-nowrap">' + a.full_name + "</span>";
           },
         },
         {
           targets: 3,
           render: function (e, t, a, n) {
-            return '<span class="text-nowrap">' + a.area + "</span>";
+            return '<span class="text-nowrap">' + a.email + "</span>";
           },
         },
         {
           targets: 4,
           render: function (e, t, a, n) {
-            return '<span class="text-nowrap">' + a.hotel_name + "</span>";
+            return '<span class="text-nowrap">' + a.last_checkin + "</span>";
           },
         },
         {
           targets: 5,
           render: function (e, t, a, n) {
-            return '<a href="manage-user-list.html" class="text-heading text-truncate"><span class="text-nowrap"><u>' + a.users + "</u></span></a>";
+            return '<span class="text-nowrap">' + a.place + "</span>";
           },
         },
         {
@@ -58,7 +58,7 @@ $(function () {
           orderable: !1,
           render: function (e, t, a, n) {
             return (
-              '<a href="' + l + '" class="me-2"><i class="mdi mdi-pencil-outline me-2"></i><span>Edit</span></a><a href="javascript:;" class="text-danger delete-record"><i class="mdi mdi-delete-outline"></i><span>Delete</span></a></div>'
+              '<a href="./member-history.html" class="me-2 text-warning"><i class="mdi mdi-history me-2"></i><span>History</span></a><a href="' + l + '" class="me-2"><i class="mdi mdi-pencil-outline me-2"></i><span>Edit</span></a><a href="javascript:;" class="text-danger delete-record me-2"><i class="mdi mdi-delete-outline"></i><span>Delete</span></a></div>'
             );
           },
         },
@@ -72,10 +72,17 @@ $(function () {
       },
       buttons: [
         {
-          text: '<i class="mdi mdi-plus me-0 me-sm-1"></i><span class="d-none d-sm-inline-block">Add Hotel</span>',
+          text: '<i class="mdi mdi-export-variant me-1"></i><span class="d-none d-sm-inline-block">Import Data</span>',
+            className: "btn btn-label-secondary mx-3",
+            action: function() {
+              window.location.href = './member-import.html';
+            }
+        },
+        {
+          text: '<i class="mdi mdi-plus me-1"></i><span class="d-none d-sm-inline-block">Create Member</span>',
             className: "add-new btn btn-primary mx-3",
             action: function() {
-              window.location.href = './hotel-create.html';
+              window.location.href = './member-create.html';
             }
         },
       ],
@@ -83,7 +90,7 @@ $(function () {
         details: {
           display: $.fn.dataTable.Responsive.display.modal({
             header: function (e) {
-              return "Details of " + e.data().name;
+              return "Details of " + e.data().full_name;
             },
           }),
           type: "column",
@@ -133,7 +140,7 @@ $(function () {
           });
       },
     })),
-    $(".datatables-hotels tbody").on(
+    $(".datatables-member tbody").on(
       "click",
       ".delete-record",
       function () {

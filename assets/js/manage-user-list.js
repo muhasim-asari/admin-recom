@@ -113,7 +113,7 @@ $(function () {
             text: '<i class="mdi mdi-plus me-0 me-sm-1"></i><span class="d-none d-sm-inline-block">Add User</span>',
             className: "add-new btn btn-primary mx-3",
             action: function() {
-              window.location.href = './create-manage-user.html';
+              window.location.href = './manage-user-create.html';
             }
           },
         ],
@@ -143,27 +143,27 @@ $(function () {
             },
           },
         },
-        initComplete: function () {
-          this.api()
-            .columns(3)
-            .every(function () {
-              var t = this,
-                a = $(
-                  '<select id="UserRole" class="form-select text-capitalize"><option value=""> Select Role </option></select>'
-                )
-                  .appendTo(".user_role")
-                  .on("change", function () {
-                    var e = $.fn.dataTable.util.escapeRegex($(this).val());
-                    t.search(e ? "^" + e + "$" : "", !0, !1).draw();
-                  });
-              t.data()
-                .unique()
-                .sort()
-                .each(function (e, t) {
-                  a.append('<option value="' + e + '">' + e + "</option>");
-                });
-            })
-        },
+        // initComplete: function () {
+        //   this.api()
+        //     .columns(3)
+        //     .every(function () {
+        //       var t = this,
+        //         a = $(
+        //           '<select id="UserRole" class="form-select text-capitalize"><option value=""> Select Role </option></select>'
+        //         )
+        //           .appendTo(".user_role")
+        //           .on("change", function () {
+        //             var e = $.fn.dataTable.util.escapeRegex($(this).val());
+        //             t.search(e ? "^" + e + "$" : "", !0, !1).draw();
+        //           });
+        //       t.data()
+        //         .unique()
+        //         .sort()
+        //         .each(function (e, t) {
+        //           a.append('<option value="' + e + '">' + e + "</option>");
+        //         });
+        //     })
+        // },
       })),
     $(".datatables-manage-users tbody").on("click", ".delete-record", function () {
       e.row($(this).parents("tr")).remove().draw();

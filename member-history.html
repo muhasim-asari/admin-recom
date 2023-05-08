@@ -15,7 +15,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>User List - CRM</title>
+    <title>Member History - CRM</title>
 
     <meta
       name="description"
@@ -179,13 +179,13 @@
                 <div data-i18n="Master User">Master User</div>
               </a>
             </li>
-            <li class="menu-item active">
+            <li class="menu-item">
               <a href="./hotel-list.html" class="menu-link">
                 <i class="menu-icon tf-icons mdi mdi-bed-outline"></i>
                 <div data-i18n="Master Hotel">Master Hotel</div>
               </a>
             </li>
-            <li class="menu-item">
+            <li class="menu-item active">
               <a href="./member-list.html" class="menu-link">
                 <i class="menu-icon tf-icons mdi mdi-account-group-outline"></i>
                 <div data-i18n="Master Member">Master Member</div>
@@ -380,160 +380,28 @@
 
             <div class="container-xxl flex-grow-1 container-p-y">
               <h4 class="fw-bold py-3 mb-4">
-                <span class="text-muted fw-light">Master Manage User/</span> Marjory Sicely
+                <span class="text-muted fw-light">Master Customer/</span> Ahmad Abdullah History
               </h4>
 
-              <!-- Multi Column with Form Separator -->
-              <div class="card mb-4">
-                <form class="card-body">
-                  <div class="row g-4">
-                    <div class="col-md-6">
-                      <div class="form-floating form-floating-outline">
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="add-user-fullname"
-                          placeholder="John Doe"
-                          name="userFullname"
-                          value="Marjory Sicely"
-                          aria-label="John Doe"
-                        />
-                        <label for="add-user-fullname">Full Name</label>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-password-toggle">
-                        <div class="input-group input-group-merge">
-                          <div class="form-floating form-floating-outline">
-                            <input
-                              type="text"
-                              id="add-user-email"
-                              class="form-control"
-                              placeholder="john.doe@example.com"
-                              aria-label="john.doe@example.com"
-                              name="userEmail"
-                              value="msicely2@who.int"
-                            />
-                            <label for="add-user-email">Email</label>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="form-password-toggle">
-                        <div class="input-group input-group-merge">
-                          <div class="form-floating form-floating-outline">
-                            <input
-                              type="password"
-                              id="multicol-confirm-password"
-                              class="form-control"
-                              placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
-                              aria-describedby="multicol-confirm-password2"
-                            />
-                            <label for="multicol-confirm-password"
-                              >Change Password</label
-                            >
-                          </div>
-                          <span
-                            class="input-group-text cursor-pointer"
-                            id="multicol-confirm-password2"
-                            ><i class="mdi mdi-eye-off-outline"></i
-                          ></span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-input-option mb-4">
-                        <h6>User Access</h6>
-                        <div class="add-user-permission mt-3">
-                          <div class="row">
-                            <div class="col-md-6">
-                              <div class="form-check">
-                                <input
-                                  class="form-check-input select-all"
-                                  type="checkbox"
-                                  id="selectAll"
-                                  data-value="all"
-                                  checked=""
-                                />
-                                <label class="form-check-label" for="selectAll"
-                                  >Uncheck All</label
-                                >
-                              </div>
-                              <div class="form-check">
-                                <input
-                                  class="form-check-input input-filter"
-                                  type="checkbox"
-                                  data-value="dashboard"
-                                  id="selectDashboard"
-                                  checked=""
-                                />
-                                <label
-                                  class="form-check-label"
-                                  for="selectDashboard"
-                                  >Dashboard</label
-                                >
-                              </div>
-                              <div class="form-check">
-                                <input
-                                  class="form-check-input input-filter"
-                                  type="checkbox"
-                                  data-value="hotel"
-                                  id="selectMasterHotel"
-                                  checked=""
-                                />
-                                <label
-                                  class="form-check-label"
-                                  for="selectMasterHotel"
-                                  >Master Hotel</label
-                                >
-                              </div>
-                            </div>
-                            <div class="col-md-6">
-                              <div class="form-check">
-                                <input
-                                  class="form-check-input input-filter"
-                                  type="checkbox"
-                                  data-value="template"
-                                  id="selectTemplate"
-                                  checked=""
-                                />
-                                <label
-                                  class="form-check-label"
-                                  for="selectTemplate"
-                                  >Template</label
-                                >
-                              </div>
-                              <div class="form-check">
-                                <input
-                                  class="form-check-input input-filter"
-                                  type="checkbox"
-                                  data-value="campaign"
-                                  id="selectCampaign"
-                                  checked=""
-                                />
-                                <label
-                                  class="form-check-label"
-                                  for="selectCampaign"
-                                  >Campaign</label
-                                >
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="pt-4">
-                    <button type="submit" class="btn btn-primary me-sm-3 me-1">
-                      Save Changes
-                    </button>
-                    <button type="reset" class="btn btn-label-secondary">
-                      Cancel
-                    </button>
-                  </div>
-                </form>
+              <!-- Hotel Table -->
+              <div class="card">
+                <div class="card-datatable table-responsive">
+                  <table class="datatables-history table">
+                    <thead class="table-light">
+                      <tr>
+                        <th></th>
+                        <th></th>
+                        <th>Check In</th>
+                        <th>Night Stays</th>
+                        <th>Check Out</th>
+                        <th>Hotel</th>
+                        <th>Area (City)</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
               </div>
+              <!--/ Hotel Table -->
             </div>
             <!-- / Content -->
 
@@ -581,7 +449,7 @@
     <script src=".\assets\js\main.js"></script>
 
     <!-- Page JS -->
-    <script src=".\assets\js\app-user-list.js"></script>
+    <script src=".\assets\js\app-member-history.js"></script>
   </body>
 </html>
 

@@ -171,7 +171,7 @@
             <li class="menu-header fw-light mt-4">
               <span class="menu-header-text">Main Menu</span>
             </li>
-            <li class="menu-item">
+            <li class="menu-item active">
               <a href="./user-list.html" class="menu-link">
                 <i
                   class="menu-icon tf-icons mdi mdi-account-multiple-outline"
@@ -179,7 +179,7 @@
                 <div data-i18n="Master User">Master User</div>
               </a>
             </li>
-            <li class="menu-item active">
+            <li class="menu-item">
               <a href="./hotel-list.html" class="menu-link">
                 <i class="menu-icon tf-icons mdi mdi-bed-outline"></i>
                 <div data-i18n="Master Hotel">Master Hotel</div>
@@ -380,7 +380,7 @@
 
             <div class="container-xxl flex-grow-1 container-p-y">
               <h4 class="fw-bold py-3 mb-4">
-                <span class="text-muted fw-light">Master Manage User/</span> Marjory Sicely
+                <span class="text-muted fw-light">Master User/</span> Add User
               </h4>
 
               <!-- Multi Column with Form Separator -->
@@ -395,10 +395,21 @@
                           id="add-user-fullname"
                           placeholder="John Doe"
                           name="userFullname"
-                          value="Marjory Sicely"
+                          value=""
                           aria-label="John Doe"
                         />
                         <label for="add-user-fullname">Full Name</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="input-group input-group-merge">
+                        <div class="form-floating form-floating-outline">
+                          <select id="user-role" class="form-select">
+                            <option value="admin">Admin</option>
+                            <option value="operator">Operator</option>
+                          </select>
+                          <label for="user-role">Choose Role</label>
+                        </div>
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -412,14 +423,14 @@
                               placeholder="john.doe@example.com"
                               aria-label="john.doe@example.com"
                               name="userEmail"
-                              value="msicely2@who.int"
+                              value=""
                             />
                             <label for="add-user-email">Email</label>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-12">
+                    <div class="col-md-6">
                       <div class="form-password-toggle">
                         <div class="input-group input-group-merge">
                           <div class="form-floating form-floating-outline">
@@ -478,6 +489,20 @@
                                 <input
                                   class="form-check-input input-filter"
                                   type="checkbox"
+                                  data-value="user"
+                                  id="selectMasterUser"
+                                  checked=""
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="selectMasterUser"
+                                  >Master User</label
+                                >
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input input-filter"
+                                  type="checkbox"
                                   data-value="hotel"
                                   id="selectMasterHotel"
                                   checked=""
@@ -494,6 +519,20 @@
                                 <input
                                   class="form-check-input input-filter"
                                   type="checkbox"
+                                  data-value="customer"
+                                  id="selectMasterCustomer"
+                                  checked=""
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="selectMasterCustomer"
+                                  >Master Customer</label
+                                >
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input input-filter"
+                                  type="checkbox"
                                   data-value="template"
                                   id="selectTemplate"
                                   checked=""
@@ -502,6 +541,20 @@
                                   class="form-check-label"
                                   for="selectTemplate"
                                   >Template</label
+                                >
+                              </div>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input input-filter"
+                                  type="checkbox"
+                                  data-value="calendar"
+                                  id="selectCalendar"
+                                  checked=""
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="selectCalendar"
+                                  >Calendar</label
                                 >
                               </div>
                               <div class="form-check">
@@ -526,7 +579,7 @@
                   </div>
                   <div class="pt-4">
                     <button type="submit" class="btn btn-primary me-sm-3 me-1">
-                      Save Changes
+                      Create User
                     </button>
                     <button type="reset" class="btn btn-label-secondary">
                       Cancel

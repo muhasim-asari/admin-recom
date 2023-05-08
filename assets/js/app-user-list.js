@@ -133,7 +133,7 @@ $(function () {
             text: '<i class="mdi mdi-plus me-0 me-sm-1"></i><span class="d-none d-sm-inline-block">Add User</span>',
             className: "add-new btn btn-primary mx-3",
             action: function() {
-              window.location.href = './create-user.html';
+              window.location.href = './user-create.html';
             }
           },
         ],
