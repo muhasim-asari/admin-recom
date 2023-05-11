@@ -1,5 +1,4 @@
-﻿<!DOCTYPE html>
-
+<!DOCTYPE html>
 <html
   lang="en"
   class="light-style layout-navbar-fixed layout-menu-fixed"
@@ -15,7 +14,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>User List - CRM</title>
+    <title>Template Check In - CRM</title>
 
     <meta
       name="description"
@@ -24,11 +23,6 @@
     <meta
       name="keywords"
       content="dashboard, material, material design, bootstrap 5 dashboard, bootstrap 5 design, bootstrap 5"
-    />
-    <!-- Canonical SEO -->
-    <link
-      rel="canonical"
-      href="\..\item\materialize-material-design-admin-template\11446068.html"
     />
 
     <!-- Favicon -->
@@ -43,6 +37,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
 
@@ -81,28 +80,34 @@
     />
     <link
       rel="stylesheet"
-      href=".\assets\vendor\libs\datatables-bs5\datatables.bootstrap5.css"
+      href=".\assets\vendor\libs\apex-charts\apex-charts.css"
     />
-    <link
-      rel="stylesheet"
-      href=".\assets\vendor\libs\datatables-responsive-bs5\responsive.bootstrap5.css"
-    />
-    <link
-      rel="stylesheet"
-      href=".\assets\vendor\libs\datatables-buttons-bs5\buttons.bootstrap5.css"
-    />
-    <link
-      rel="stylesheet"
-      href=".\assets\vendor\libs\datatables-checkboxes-jquery\datatables.checkboxes.css"
-    />
-    <link rel="stylesheet" href=".\assets\vendor\libs\select2\select2.css" />
-    <link
-      rel="stylesheet"
-      href=".\assets\vendor\libs\formvalidation\dist\css\formValidation.min.css"
-    />
+    <link rel="stylesheet" href=".\assets\vendor\libs\swiper\swiper.css" />
 
     <!-- Page CSS -->
     <link rel="stylesheet" href=".\assets\vendor\css\pages\core-theme.css" />
+
+    <style>
+      .iframe-wrapper {
+        width: 100%; /* Set the desired width */
+        margin: 0 auto; /* Center the element horizontally */
+        border-radius: 0.625rem;
+      }
+
+      .iframe-wrapper iframe {
+        width: 100%;
+        height: calc(100vh - 30vh);
+      }
+
+      .full-height {
+        border-radius: inherit;
+        height: 100%;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+      }
+    </style>
 
     <!-- Helpers -->
     <script src=".\assets\vendor\js\helpers.js"></script>
@@ -125,7 +130,7 @@
           class="layout-menu menu-vertical menu bg-menu-theme"
         >
           <div class="app-brand demo">
-            <a href="./dashboard.html" class="app-brand-link">
+            <a href="././dashboard.html" class="app-brand-link">
               <span class="app-brand-text demo menu-text fw-bold ms-2"
                 >Admin Dashboard</span
               >
@@ -171,7 +176,7 @@
             <li class="menu-header fw-light mt-4">
               <span class="menu-header-text">Main Menu</span>
             </li>
-            <li class="menu-item active">
+            <li class="menu-item">
               <a href="./user-list.html" class="menu-link">
                 <i
                   class="menu-icon tf-icons mdi mdi-account-multiple-outline"
@@ -191,13 +196,13 @@
                 <div data-i18n="Master Member">Master Member</div>
               </a>
             </li>
-            <li class="menu-item">
+            <li class="menu-item active open">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons mdi mdi-file-document-outline"></i>
                 <div data-i18n="Template">Template</div>
               </a>
               <ul class="menu-sub">
-                <li class="menu-item">
+                <li class="menu-item active">
                   <a href="./template-check-in.html" class="menu-link">
                     <div data-i18n="Check In">Check In</div>
                   </a>
@@ -233,7 +238,7 @@
               </a>
             </li>
             <li class="menu-item">
-              <a href="./" class="menu-link">
+              <a href="./campaign-list.html" class="menu-link">
                 <i class="menu-icon tf-icons mdi mdi-vector-arrange-below"></i>
                 <div data-i18n="Campaign">Campaign</div>
               </a>
@@ -265,22 +270,6 @@
               class="navbar-nav-right d-flex align-items-center"
               id="navbar-collapse"
             >
-              <!-- Search -->
-              <div class="navbar-nav align-items-center">
-                <div class="nav-item navbar-search-wrapper mb-0">
-                  <a
-                    class="nav-item nav-link search-toggler fw-normal px-0"
-                    href="javascript:void(0);"
-                  >
-                    <i class="mdi mdi-magnify mdi-24px scaleX-n1-rtl"></i>
-                    <span class="d-none d-md-inline-block text-muted"
-                      >Search (Ctrl+/)</span
-                    >
-                  </a>
-                </div>
-              </div>
-              <!-- /Search -->
-
               <ul class="navbar-nav flex-row align-items-center ms-auto">
                 <!-- User -->
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
@@ -324,7 +313,7 @@
                       <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="pages-profile-user.html">
+                      <a class="dropdown-item" href="./">
                         <i class="mdi mdi-account-outline me-2"></i>
                         <span class="align-middle">My Profile</span>
                       </a>
@@ -333,10 +322,7 @@
                       <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                      <a
-                        class="dropdown-item"
-                        href="pages-help-center-landing.html"
-                      >
+                      <a class="dropdown-item" href="./">
                         <i class="mdi mdi-lifebuoy me-2"></i>
                         <span class="align-middle">Help</span>
                       </a>
@@ -365,17 +351,6 @@
                 <!--/ User -->
               </ul>
             </div>
-
-            <!-- Search Small Screens -->
-            <div class="navbar-search-wrapper search-input-wrapper d-none">
-              <input
-                type="text"
-                class="form-control search-input container-xxl border-0"
-                placeholder="Search..."
-                aria-label="Search..."
-              />
-              <i class="mdi mdi-close search-toggler cursor-pointer"></i>
-            </div>
           </nav>
 
           <!-- / Navbar -->
@@ -383,214 +358,69 @@
           <div class="content-wrapper">
             <!-- Content -->
 
-            <div class="container-xxl flex-grow-1 container-p-y">
-              <h4 class="fw-bold py-3 mb-4">
-                <span class="text-muted fw-light">Master User/</span> Marjory Sicely
-              </h4>
-
-              <!-- Multi Column with Form Separator -->
-              <div class="card mb-4">
-                <form class="card-body">
-                  <div class="row g-4">
-                    <div class="col-md-6">
-                      <div class="form-floating form-floating-outline">
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="add-user-fullname"
-                          placeholder="John Doe"
-                          name="userFullname"
-                          value="Marjory Sicely"
-                          aria-label="John Doe"
-                        />
-                        <label for="add-user-fullname">Full Name</label>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="input-group input-group-merge">
-                        <div class="form-floating form-floating-outline">
-                          <select id="user-role" class="form-select">
-                            <option value="admin">Admin</option>
-                            <option value="operator">Operator</option>
-                          </select>
-                          <label for="user-role">Choose Role</label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-password-toggle">
-                        <div class="input-group input-group-merge">
-                          <div class="form-floating form-floating-outline">
-                            <input
-                              type="text"
-                              id="add-user-email"
-                              class="form-control"
-                              placeholder="john.doe@example.com"
-                              aria-label="john.doe@example.com"
-                              name="userEmail"
-                              value="msicely2@who.int"
-                            />
-                            <label for="add-user-email">Email</label>
+            <div
+              class="container-xxl d-flex align-items-stretch flex-grow-1 p-0"
+            >
+              <div
+                class="flex-shrink-1 flex-grow-1 container-p-x container-p-y"
+              >
+                <div class="row gy-4">
+                  <div class="col-md-12">
+                    <div class="card">
+                      <div class="card-header">
+                        <div class="row">
+                          <div class="col-md-6 d-flex align-items-center">
+                            <div class="form-check form-switch mb-0">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="autoSendEmail"
+                                checked=""
+                              />
+                              <label class="form-check-label" for="autoSendEmail"
+                                >Automatic Send Email</label
+                              >
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-password-toggle">
-                        <div class="input-group input-group-merge">
-                          <div class="form-floating form-floating-outline">
-                            <input
-                              type="password"
-                              id="multicol-confirm-password"
-                              class="form-control"
-                              placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
-                              aria-describedby="multicol-confirm-password2"
-                            />
-                            <label for="multicol-confirm-password"
-                              >Change Password</label
+                          <div class="col-md-6 text-end">
+                            <a
+                              href="javascript:;"
+                              data-bs-target="#sendTestEmail"
+                              data-bs-toggle="modal"
+                              data-bs-dismiss="modal"
+                              aria-controls="Send_Test_Email"
+                              class="btn btn-outline-secondary"
                             >
-                          </div>
-                          <span
-                            class="input-group-text cursor-pointer"
-                            id="multicol-confirm-password2"
-                            ><i class="mdi mdi-eye-off-outline"></i
-                          ></span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-input-option mb-4">
-                        <h6>User Access</h6>
-                        <div class="add-user-permission mt-3">
-                          <div class="row">
-                            <div class="col-md-6">
-                              <div class="form-check">
-                                <input
-                                  class="form-check-input select-all"
-                                  type="checkbox"
-                                  id="selectAll"
-                                  data-value="all"
-                                  checked=""
-                                />
-                                <label class="form-check-label" for="selectAll"
-                                  >Uncheck All</label
-                                >
-                              </div>
-                              <div class="form-check">
-                                <input
-                                  class="form-check-input input-filter"
-                                  type="checkbox"
-                                  data-value="dashboard"
-                                  id="selectDashboard"
-                                  checked=""
-                                />
-                                <label
-                                  class="form-check-label"
-                                  for="selectDashboard"
-                                  >Dashboard</label
-                                >
-                              </div>
-                              <div class="form-check">
-                                <input
-                                  class="form-check-input input-filter"
-                                  type="checkbox"
-                                  data-value="user"
-                                  id="selectMasterUser"
-                                  checked=""
-                                />
-                                <label
-                                  class="form-check-label"
-                                  for="selectMasterUser"
-                                  >Master User</label
-                                >
-                              </div>
-                              <div class="form-check">
-                                <input
-                                  class="form-check-input input-filter"
-                                  type="checkbox"
-                                  data-value="hotel"
-                                  id="selectMasterHotel"
-                                  checked=""
-                                />
-                                <label
-                                  class="form-check-label"
-                                  for="selectMasterHotel"
-                                  >Master Hotel</label
-                                >
-                              </div>
-                            </div>
-                            <div class="col-md-6">
-                              <div class="form-check">
-                                <input
-                                  class="form-check-input input-filter"
-                                  type="checkbox"
-                                  data-value="customer"
-                                  id="selectMasterCustomer"
-                                  checked=""
-                                />
-                                <label
-                                  class="form-check-label"
-                                  for="selectMasterCustomer"
-                                  >Master Customer</label
-                                >
-                              </div>
-                              <div class="form-check">
-                                <input
-                                  class="form-check-input input-filter"
-                                  type="checkbox"
-                                  data-value="template"
-                                  id="selectTemplate"
-                                  checked=""
-                                />
-                                <label
-                                  class="form-check-label"
-                                  for="selectTemplate"
-                                  >Template</label
-                                >
-                              </div>
-                              <div class="form-check">
-                                <input
-                                  class="form-check-input input-filter"
-                                  type="checkbox"
-                                  data-value="calendar"
-                                  id="selectCalendar"
-                                  checked=""
-                                />
-                                <label
-                                  class="form-check-label"
-                                  for="selectCalendar"
-                                  >Calendar</label
-                                >
-                              </div>
-                              <div class="form-check">
-                                <input
-                                  class="form-check-input input-filter"
-                                  type="checkbox"
-                                  data-value="campaign"
-                                  id="selectCampaign"
-                                  checked=""
-                                />
-                                <label
-                                  class="form-check-label"
-                                  for="selectCampaign"
-                                  >Campaign</label
-                                >
-                              </div>
-                            </div>
+                              <span
+                                ><span class="d-none d-sm-inline-block"
+                                  >Send Test Email</span
+                                ></span
+                              >
+                            </a>
+                            <a
+                              class="btn btn-secondary add-new btn-primary"
+                              aria-controls="Customize"
+                              href="./template-check-in-customize.html"
+                            >
+                              <span
+                                ><span class="d-none d-sm-inline-block"
+                                  >Customize</span
+                                ></span
+                              >
+                            </a>
                           </div>
                         </div>
                       </div>
+                      <div class="iframe-wrapper full-height">
+                        <iframe
+                          class="iframe-email-preview full-height"
+                          src="./checkin-email.html"
+                          frameborder="0"
+                        ></iframe>
+                      </div>
                     </div>
                   </div>
-                  <div class="pt-4">
-                    <button type="submit" class="btn btn-primary me-sm-3 me-1">
-                      Save Changes
-                    </button>
-                    <button type="reset" class="btn btn-label-secondary">
-                      Cancel
-                    </button>
-                  </div>
-                </form>
+                </div>
               </div>
             </div>
             <!-- / Content -->
@@ -598,6 +428,71 @@
             <div class="content-backdrop fade"></div>
           </div>
           <!-- Content wrapper -->
+
+          <!-- Modal Send Test Email -->
+          <div
+            class="modal fade"
+            id="sendTestEmail"
+            tabindex="-1"
+            aria-hidden="true"
+            style="display: none"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content p-3 p-md-5">
+                <button
+                  type="button"
+                  class="btn-close btn-pinned"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+                <div class="modal-body p-md-0">
+                  <div class="text-center mb-4">
+                    <h3 class="mb-2 pb-1">Send a Test</h3>
+                  </div>
+                  <form
+                    id="sendTestEmailForm"
+                    class="row pt-2 fv-plugins-bootstrap5 fv-plugins-framework"
+                    onsubmit="return false"
+                    novalidate="novalidate"
+                  >
+                    <div class="col-sm-12 mb-3 fv-plugins-icon-container">
+                      <div class="form-floating form-floating-outline">
+                        <input
+                          type="email"
+                          id="sendTestTo"
+                          name="sendTestTo"
+                          class="form-control"
+                          placeholder="Ex. maria.carl@gmail.com"
+                          tabindex="-1"
+                        />
+                        <label for="sendTestTo">Send a test to</label>
+                      </div>
+                      <div
+                        class="fv-plugins-message-container invalid-feedback"
+                      ></div>
+                    </div>
+                    <div class="col-12 text-center">
+                      <button
+                        type="submit"
+                        class="btn btn-primary me-sm-3 me-1 waves-effect waves-light"
+                      >
+                        Send Test
+                      </button>
+                      <button
+                        type="reset"
+                        class="btn btn-outline-secondary waves-effect"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        Cancel
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- / Modal Send Test Email -->
         </div>
         <!-- / Layout page -->
       </div>
@@ -626,20 +521,12 @@
     <!-- endbuild -->
 
     <!-- Vendors JS -->
-    <script src=".\assets\vendor\libs\moment\moment.js"></script>
-    <script src=".\assets\vendor\libs\datatables-bs5\datatables-bootstrap5.js"></script>
-    <script src=".\assets\vendor\libs\select2\select2.js"></script>
-    <script src=".\assets\vendor\libs\formvalidation\dist\js\FormValidation.min.js"></script>
-    <script src=".\assets\vendor\libs\formvalidation\dist\js\plugins\Bootstrap5.min.js"></script>
-    <script src=".\assets\vendor\libs\formvalidation\dist\js\plugins\AutoFocus.min.js"></script>
-    <script src=".\assets\vendor\libs\cleavejs\cleave.js"></script>
-    <script src=".\assets\vendor\libs\cleavejs\cleave-phone.js"></script>
 
     <!-- Main JS -->
     <script src=".\assets\js\main.js"></script>
+    <script src=".\assets\js\app-template.js"></script>
 
     <!-- Page JS -->
-    <script src=".\assets\js\app-user-list.js"></script>
   </body>
 </html>
 

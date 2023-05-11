@@ -1,0 +1,722 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" class="layout-navbar-fixed layout-menu-fixed" dir="ltr" data-theme="theme-default"
+  data-assets-path="./assets/" data-template="vertical-menu-template">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+  <title>
+    Dashboard - CRM
+  </title>
+
+  <meta name="description"
+    content="Materialize – is the most developer friendly &amp; highly customizable Admin Dashboard Template." />
+  <meta name="keywords"
+    content="dashboard, material, material design, bootstrap 5 dashboard, bootstrap 5 design, bootstrap 5" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href=".\assets\img\favicon\favicon.ico" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href=".\assets\vendor\fonts\materialdesignicons.css" />
+  <link rel="stylesheet" href=".\assets\vendor\fonts\fontawesome.css" />
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href=".\assets\vendor\css\rtl\core.css" class="template-customizer-core-css" />
+  <link rel="stylesheet" href=".\assets\vendor\css\rtl\theme-default.css" class="template-customizer-theme-css" />
+  <link rel="stylesheet" href=".\assets\css\demo.css" />
+
+  <!-- Vendors CSS -->
+  <link rel="stylesheet" href=".\assets\vendor\libs\perfect-scrollbar\perfect-scrollbar.css" />
+  <link rel="stylesheet" href=".\assets\vendor\libs\node-waves\node-waves.css" />
+  <link rel="stylesheet" href=".\assets\vendor\libs\typeahead-js\typeahead.css" />
+  <link rel="stylesheet" href=".\assets\vendor\libs\apex-charts\apex-charts.css" />
+  <link rel="stylesheet" href=".\assets\vendor\libs\swiper\swiper.css" />
+
+  <!-- Page CSS -->
+  <link rel="stylesheet" href=".\assets\vendor\css\pages\core-theme.css" />
+
+  <!-- Helpers -->
+  <script src=".\assets\vendor\js\helpers.js"></script>
+
+  <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+  <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
+  <script src=".\assets\vendor\js\template-customizer.js"></script>
+  <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+  <script src=".\assets\js\config.js"></script>
+</head>
+
+<body>
+
+  <!-- Layout wrapper -->
+  <div class="layout-wrapper layout-content-navbar">
+    <div class="layout-container">
+      <!-- Menu -->
+
+      <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+        <div class="app-brand demo">
+          <a href="././dashboard.html" class="app-brand-link">
+            <span class="app-brand-text demo menu-text fw-bold ms-2">Admin Dashboard</span>
+          </a>
+
+          <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
+            <svg width="22" height="22" viewbox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M11.4854 4.88844C11.0081 4.41121 10.2344 4.41121 9.75715 4.88844L4.51028 10.1353C4.03297 10.6126 4.03297 11.3865 4.51028 11.8638L9.75715 17.1107C10.2344 17.5879 11.0081 17.5879 11.4854 17.1107C11.9626 16.6334 11.9626 15.8597 11.4854 15.3824L7.96672 11.8638C7.48942 11.3865 7.48942 10.6126 7.96672 10.1353L11.4854 6.61667C11.9626 6.13943 11.9626 5.36568 11.4854 4.88844Z"
+                fill="currentColor" fill-opacity="0.6"></path>
+              <path
+                d="M15.8683 4.88844L10.6214 10.1353C10.1441 10.6126 10.1441 11.3865 10.6214 11.8638L15.8683 17.1107C16.3455 17.5879 17.1192 17.5879 17.5965 17.1107C18.0737 16.6334 18.0737 15.8597 17.5965 15.3824L14.0778 11.8638C13.6005 11.3865 13.6005 10.6126 14.0778 10.1353L17.5965 6.61667C18.0737 6.13943 18.0737 5.36568 17.5965 4.88844C17.1192 4.41121 16.3455 4.41121 15.8683 4.88844Z"
+                fill="currentColor" fill-opacity="0.38"></path>
+            </svg>
+          </a>
+        </div>
+
+        <div class="menu-inner-shadow"></div>
+
+        <ul class="menu-inner py-1">
+          <!-- Dashboards -->
+          <li class="menu-item active">
+            <a href="./dashboard.html" class="menu-link">
+              <i class="menu-icon tf-icons mdi mdi-home-outline"></i>
+              <div data-i18n="Dashboards">Dasboard</div>
+            </a>
+          </li>
+
+          <!-- Apps & Pages -->
+          <li class="menu-header fw-light mt-4">
+            <span class="menu-header-text">Main Menu</span>
+          </li>
+          <li class="menu-item">
+            <a href="./user-list.html" class="menu-link">
+              <i class="menu-icon tf-icons mdi mdi-account-multiple-outline"></i>
+              <div data-i18n="Master User">Master User</div>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="./hotel-list.html" class="menu-link">
+              <i class="menu-icon tf-icons mdi mdi-bed-outline"></i>
+              <div data-i18n="Master Hotel">Master Hotel</div>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="./member-list.html" class="menu-link">
+              <i class="menu-icon tf-icons mdi mdi-account-group-outline"></i>
+              <div data-i18n="Master Member">Master Member</div>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+              <i class="menu-icon tf-icons mdi mdi-file-document-outline"></i>
+              <div data-i18n="Template">Template</div>
+            </a>
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="./template-check-in.html" class="menu-link">
+                  <div data-i18n="Check In">Check In</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="./template-check-out.html" class="menu-link">
+                  <div data-i18n="Check Out">Check Out</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="./template-birthday.html" class="menu-link">
+                  <div data-i18n="Birthday">Birthday</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="./template-calendar-event.html" class="menu-link">
+                  <div data-i18n="Calendar Event">Calendar Event</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="./template-promotion.html" class="menu-link">
+                  <div data-i18n="Promotion">Promotion</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a href="./calendar.html" class="menu-link">
+              <i class="menu-icon tf-icons mdi mdi-calendar-blank-outline"></i>
+              <div data-i18n="Calendar">Calendar</div>
+            </a>
+          </li>
+          <li class="menu-item">
+            <a href="./campaign-list.html" class="menu-link">
+              <i class="menu-icon tf-icons mdi mdi-vector-arrange-below"></i>
+              <div data-i18n="Campaign">Campaign</div>
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <!-- / Menu -->
+
+      <!-- Layout container -->
+      <div class="layout-page">
+        <!-- Navbar -->
+        <nav
+          class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
+          id="layout-navbar">
+          <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0   d-xl-none ">
+            <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+              <i class="mdi mdi-menu mdi-24px"></i>
+            </a>
+          </div>
+
+          <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+            <ul class="navbar-nav flex-row align-items-center ms-auto">
+              <!-- Notification -->
+              <li class="nav-item dropdown-notifications navbar-dropdown dropdown me-2 me-xl-1">
+                <a class="nav-link btn btn-text-secondary rounded-pill btn-icon dropdown-toggle hide-arrow waves-effect waves-light"
+                  href="javascript:void(0);" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                  aria-expanded="false">
+                  <i class="mdi mdi-bell-outline mdi-24px"></i>
+                  <span
+                    class="position-absolute top-0 start-50 translate-middle-y badge badge-dot bg-danger mt-2 border"></span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end py-0">
+                  <li class="dropdown-menu-header border-bottom">
+                    <div class="dropdown-header d-flex align-items-center py-3">
+                      <h6 class="mb-0 me-auto">Notification</h6>
+                      <span class="badge rounded-pill bg-label-primary">8 New</span>
+                    </div>
+                  </li>
+                  <li class="dropdown-notifications-list scrollable-container ps">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item list-group-item-action dropdown-notifications-item waves-effect">
+                        <div class="d-flex gap-2">
+                          <div class="flex-shrink-0">
+                            <div class="avatar me-1">
+                              <img src="../../assets/img/avatars/1.png" alt="" class="w-px-40 h-auto rounded-circle">
+                            </div>
+                          </div>
+                          <div class="d-flex flex-column flex-grow-1 overflow-hidden w-px-200">
+                            <h6 class="mb-1 text-truncate">Congratulation Lettie 🎉</h6>
+                            <small class="text-truncate text-body">Won the monthly best seller gold badge</small>
+                          </div>
+                          <div class="flex-shrink-0 dropdown-notifications-actions">
+                            <small class="text-muted">1h ago</small>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list-group-item list-group-item-action dropdown-notifications-item waves-effect">
+                        <div class="d-flex gap-2">
+                          <div class="flex-shrink-0">
+                            <div class="avatar me-1">
+                              <span class="avatar-initial rounded-circle bg-label-danger">CF</span>
+                            </div>
+                          </div>
+                          <div class="d-flex flex-column flex-grow-1 overflow-hidden w-px-200">
+                            <h6 class="mb-1 text-truncate">Charles Franklin</h6>
+                            <small class="text-truncate text-body">Accepted your connection</small>
+                          </div>
+                          <div class="flex-shrink-0 dropdown-notifications-actions">
+                            <small class="text-muted">12hr ago</small>
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read waves-effect">
+                        <div class="d-flex gap-2">
+                          <div class="flex-shrink-0">
+                            <div class="avatar me-1">
+                              <img src="../../assets/img/avatars/2.png" alt="" class="w-px-40 h-auto rounded-circle">
+                            </div>
+                          </div>
+                          <div class="d-flex flex-column flex-grow-1 overflow-hidden w-px-200">
+                            <h6 class="mb-1 text-truncate">New Message ✉️</h6>
+                            <small class="text-truncate text-body">You have new message from Natalie</small>
+                          </div>
+                          <div class="flex-shrink-0 dropdown-notifications-actions">
+                            <small class="text-muted">1h ago</small>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list-group-item list-group-item-action dropdown-notifications-item waves-effect">
+                        <div class="d-flex gap-2">
+                          <div class="flex-shrink-0">
+                            <div class="avatar me-1">
+                              <span class="avatar-initial rounded-circle bg-label-success"><i
+                                  class="mdi mdi-cart-outline"></i></span>
+                            </div>
+                          </div>
+                          <div class="d-flex flex-column flex-grow-1 overflow-hidden w-px-200">
+                            <h6 class="mb-1 text-truncate">Whoo! You have new order 🛒 </h6>
+                            <small class="text-truncate text-body">ACME Inc. made new order $1,154</small>
+                          </div>
+                          <div class="flex-shrink-0 dropdown-notifications-actions">
+                            <small class="text-muted">1 day ago</small>
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read waves-effect">
+                        <div class="d-flex gap-2">
+                          <div class="flex-shrink-0">
+                            <div class="avatar me-1">
+                              <img src="../../assets/img/avatars/9.png" alt="" class="w-px-40 h-auto rounded-circle">
+                            </div>
+                          </div>
+                          <div class="d-flex flex-column flex-grow-1 overflow-hidden w-px-200">
+                            <h6 class="mb-1 text-truncate">Application has been approved 🚀 </h6>
+                            <small class="text-truncate text-body">Your ABC project application has been
+                              approved.</small>
+                          </div>
+                          <div class="flex-shrink-0 dropdown-notifications-actions">
+                            <small class="text-muted">2 days ago</small>
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read waves-effect">
+                        <div class="d-flex gap-2">
+                          <div class="flex-shrink-0">
+                            <div class="avatar me-1">
+                              <span class="avatar-initial rounded-circle bg-label-success"><i
+                                  class="mdi mdi-chart-pie-outline"></i></span>
+                            </div>
+                          </div>
+                          <div class="d-flex flex-column flex-grow-1 overflow-hidden w-px-200">
+                            <h6 class="mb-1 text-truncate">Monthly report is generated</h6>
+                            <small class="text-truncate text-body">July monthly financial report is generated </small>
+                          </div>
+                          <div class="flex-shrink-0 dropdown-notifications-actions">
+                            <small class="text-muted">3 days ago</small>
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read waves-effect">
+                        <div class="d-flex gap-2">
+                          <div class="flex-shrink-0">
+                            <div class="avatar me-1">
+                              <img src="../../assets/img/avatars/5.png" alt="" class="w-px-40 h-auto rounded-circle">
+                            </div>
+                          </div>
+                          <div class="d-flex flex-column flex-grow-1 overflow-hidden w-px-200">
+                            <h6 class="mb-1 text-truncate">Send connection request</h6>
+                            <small class="text-truncate text-body">Peter sent you connection request</small>
+                          </div>
+                          <div class="flex-shrink-0 dropdown-notifications-actions">
+                            <small class="text-muted">4 days ago</small>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="list-group-item list-group-item-action dropdown-notifications-item waves-effect">
+                        <div class="d-flex gap-2">
+                          <div class="flex-shrink-0">
+                            <div class="avatar me-1">
+                              <img src="../../assets/img/avatars/6.png" alt="" class="w-px-40 h-auto rounded-circle">
+                            </div>
+                          </div>
+                          <div class="d-flex flex-column flex-grow-1 overflow-hidden w-px-200">
+                            <h6 class="mb-1 text-truncate">New message from Jane</h6>
+                            <small class="text-truncate text-body">Your have new message from Jane</small>
+                          </div>
+                          <div class="flex-shrink-0 dropdown-notifications-actions">
+                            <small class="text-muted">5 days ago</small>
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read waves-effect">
+                        <div class="d-flex gap-2">
+                          <div class="flex-shrink-0">
+                            <div class="avatar me-1">
+                              <span class="avatar-initial rounded-circle bg-label-warning"><i
+                                  class="mdi mdi-alert-circle-outline"></i></span>
+                            </div>
+                          </div>
+                          <div class="d-flex flex-column flex-grow-1 overflow-hidden w-px-200">
+                            <h6 class="mb-1">CPU is running high</h6>
+                            <small class="text-truncate text-body">CPU Utilization Percent is currently at
+                              88.63%,</small>
+                          </div>
+                          <div class="flex-shrink-0 dropdown-notifications-actions">
+                            <small class="text-muted">5 days ago</small>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+                      <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                    </div>
+                    <div class="ps__rail-y" style="top: 0px; right: 0px;">
+                      <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div>
+                    </div>
+                  </li>
+                  <li class="dropdown-menu-footer border-top p-2">
+                    <a href="javascript:void(0);"
+                      class="btn btn-primary d-flex justify-content-center waves-effect waves-light">
+                      View all notifications
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <!--/ Notification -->
+
+              <!-- User -->
+              <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+                  <div class="avatar avatar-online">
+                    <img src="../../assets/img/avatars/1.png" alt="" class="w-px-40 h-auto rounded-circle">
+                  </div>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li>
+                    <a class="dropdown-item waves-effect" href="pages-account-settings-account.html">
+                      <div class="d-flex">
+                        <div class="flex-shrink-0 me-3">
+                          <div class="avatar avatar-online">
+                            <img src="../../assets/img/avatars/1.png" alt="" class="w-px-40 h-auto rounded-circle">
+                          </div>
+                        </div>
+                        <div class="flex-grow-1">
+                          <span class="fw-semibold d-block">John Doe</span>
+                          <small class="text-muted">Admin</small>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <div class="dropdown-divider"></div>
+                  </li>
+                  <li>
+                    <a class="dropdown-item waves-effect" href="pages-profile-user.html">
+                      <i class="mdi mdi-account-outline me-2"></i>
+                      <span class="align-middle">My Profile</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item waves-effect" href="pages-account-settings-account.html">
+                      <i class="mdi mdi-cog-outline me-2"></i>
+                      <span class="align-middle">Settings</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item waves-effect" href="pages-account-settings-billing.html">
+                      <span class="d-flex align-items-center align-middle">
+                        <i class="flex-shrink-0 mdi mdi-credit-card-outline me-2"></i>
+                        <span class="flex-grow-1 align-middle">Billing</span>
+                        <span class="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20">4</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <div class="dropdown-divider"></div>
+                  </li>
+                  <li>
+                    <a class="dropdown-item waves-effect" href="pages-help-center-landing.html">
+                      <i class="mdi mdi-lifebuoy me-2"></i>
+                      <span class="align-middle">Help</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item waves-effect" href="pages-faq.html">
+                      <i class="mdi mdi-help-circle-outline me-2"></i>
+                      <span class="align-middle">FAQ</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item waves-effect" href="pages-pricing.html">
+                      <i class="mdi mdi-currency-usd me-2"></i>
+                      <span class="align-middle">Pricing</span>
+                    </a>
+                  </li>
+                  <li>
+                    <div class="dropdown-divider"></div>
+                  </li>
+                  <li>
+                    <a class="dropdown-item waves-effect" href="auth-login-cover.html" target="_blank">
+                      <i class="mdi mdi-logout me-2"></i>
+                      <span class="align-middle">Log Out</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <!--/ User -->
+
+
+
+            </ul>
+          </div>
+
+
+          <!-- Search Small Screens -->
+          <div class="navbar-search-wrapper search-input-wrapper d-none">
+            <span class="twitter-typeahead" style="position: relative; display: inline-block;"><input type="text"
+                class="form-control search-input container-xxl border-0 tt-input" placeholder="Search..."
+                aria-label="Search..." autocomplete="off" spellcheck="false" dir="auto"
+                style="position: relative; vertical-align: top;">
+              <pre aria-hidden="true"
+                style="position: absolute; visibility: hidden; white-space: pre; font-family: Inter, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Oxygen, Ubuntu, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif; font-size: 15px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre>
+              <div class="tt-menu navbar-search-suggestion ps"
+                style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;">
+                <div class="tt-dataset tt-dataset-pages"></div>
+                <div class="tt-dataset tt-dataset-files"></div>
+                <div class="tt-dataset tt-dataset-members"></div>
+                <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+                  <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                </div>
+                <div class="ps__rail-y" style="top: 0px; right: 0px;">
+                  <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div>
+                </div>
+              </div></span>
+            <i class="mdi mdi-close search-toggler cursor-pointer"></i>
+          </div>
+        </nav>
+
+        <!-- / Navbar -->
+
+        <!-- Content wrapper -->
+        <div class="content-wrapper">
+          <!-- Content -->
+
+          <div class="container-xxl flex-grow-1 container-p-y">
+            <div class="row gy-4">
+
+              <div class="col-lg-6">
+                <div class="card h-100">
+                  <div class="card-header">
+                    <div class="d-flex justify-content-between">
+                      <h4 class="mb-2">Today</h4>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <div class="badge bg-label-primary rounded-pill lh-xs">Year of 2023</div>
+                    </div>
+                  </div>
+                  <div class="card-body d-flex justify-content-between flex-wrap gap-2 ">
+                    <div class="d-flex gap-3">
+                      <div class="card-info">
+                        <h5 class="mb-4">Check-In</h5>
+                        <div class="d-flex align-items-end flex-wrap gap-1">
+                          <h3 class="m-0 me-2">10</h3>
+                          <small class="my-auto text-success">+15.6%</small>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="d-flex gap-3 px-5">
+                      <div class="card-info">
+                        <h5 class="mb-4">Check-Out</h5>
+                        <div class="d-flex align-items-end flex-wrap gap-1">
+                          <h3 class="m-0 me-2">50</h3>
+                          <small class="my-auto text-success">+15.6%</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="card h-100">
+                  <div class="card-header">
+                    <div class="d-flex justify-content-between">
+                      <h4 class="mb-2">Monthly</h4>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <div class="badge bg-label-primary rounded-pill lh-xs">Year of 2023</div>
+                    </div>
+                  </div>
+                  <div class="card-body d-flex justify-content-between flex-wrap gap-3">
+                    <div class="d-flex gap-3">
+                      <div class="card-info">
+                        <h5 class="mb-4">Check-In</h5>
+                        <div class="d-flex align-items-end flex-wrap gap-1">
+                          <h3 class="m-0 me-2">10</h3>
+                          <small class="my-auto text-success">+15.6%</small>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="d-flex gap-3 px-5">
+                      <div class="card-info">
+                        <h5 class="mb-4">Check-Out</h5>
+                        <div class="d-flex align-items-end flex-wrap gap-1">
+                          <h3 class="m-0 me-2">50</h3>
+                          <small class="my-auto text-success">+15.6%</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-sm-12 col-12">
+                <div class="card">
+                  <div class="card-header pb-3">
+                    <div class="d-flex justify-content-between flex-wrap gap-2">
+                      <h5>Blast Email Limit</h5>
+                    </div>   
+                  </div>
+                  <div class="card-body">
+                    <div class="row mt-5">
+                      <ul class="p-2 m-0">              
+                        <li class="d-flex pb-1 mb-3">
+                          <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                            <div class="me-2">
+                              <h6 class="mb-0">TOTAL</h6>
+                            </div>
+                            <div class="d-flex align-items-center">
+                              <span class="fw-semibold text-heading">250</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="d-flex pb-1 mb-3">
+                          <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                            <div class="me-2">
+                              <h6 class="mb-0">USED</h6>
+                            </div>
+                            <div class="d-flex align-items-center">
+                              <span class="fw-semibold text-heading">200</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="d-flex pb-1">
+                          <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                            <div class="me-2">
+                              <h6 class="mb-0">AVAILABLE</h6>
+                            </div>
+                            <div class="d-flex align-items-center">
+                              <span class="fw-semibold text-heading">50</span>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="d-flex align-items-center mt-2 pt-1">
+                      <div class="progress w-100 rounded" style="height: 10px;">
+                        <div class="progress-bar bg-warning" style="width: 90%" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-6 col-12">
+                <div class="card h-100">
+                  <div class="card-header pb-1">
+                    <div class="d-flex justify-content-between">
+                      <h5 class="mb-4">Campaign</h5>
+                    </div>
+                  </div>
+                  <div class="card-body" style="position: relative;">
+                    <div class="row mt-5">
+                      <div class="avatar px-5 py-4 mx-auto">
+                        <div class="avatar-initial bg-label-primary rounded">
+                          <i class="mdi mdi-email-outline mdi-24px me-1"></i>
+                        </div>
+                      </div>
+                      <h5 class="my-2  text-center">200</h5>
+                      <small class="text-center">Send Email</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-5 col-md-6">
+                <div class="card">
+                  <div class="card-header d-flex justify-content-between">
+                    <div class="card-title m-0">
+                      <h5 class="mb-0">Today's Birthday</h5>
+                      <small class="text-muted">Total 25 Guest</small>
+                    </div>
+                  </div>
+                  <div class="card-body pb-3">
+                    <div class="tab-content p-0 ms-0 ms-sm-2">
+                      <div class="tab-pane fade show active" id="navs-orders-id" role="tabpanel">
+                        <div class="text-end">
+                          <a href='#'><small><u>View All</u></small></a>
+                        </div>
+                        <div class="table-responsive text-nowrap">
+                          <table class="table table-borderless">
+                            <thead class="border-bottom">
+                              <tr>
+                                <th class="fw-medium ps-0 text-heading">Guest</th>
+                                <th class="pe-0 fw-medium text-heading">Email</th>
+                              </tr>
+                            </thead>
+                            <tbody >
+                              <tr>
+                                <td class="text-heading fw-semibold ps-0">Jordan Stevenson</td>
+                                <td class="pe-0">jordan.stev77@gmail.com</td>
+                              </tr>
+                              <tr>
+                                <td class="text-heading fw-semibold ps-0">Benedetto Rossiter</td>
+                                <td class="pe-0">ross.88@gmail.com</td>
+                              </tr>
+                              <tr>
+                                <td class="text-heading fw-semibold ps-0">Beatly Bertha</td>
+                                <td class="pe-0">beat.ly77@gmail.com</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- / Content -->
+
+          <div class="content-backdrop fade"></div>
+        </div>
+        <!-- Content wrapper -->
+      </div>
+      <!-- / Layout page -->
+    </div>
+
+    <!-- Overlay -->
+    <div class="layout-overlay layout-menu-toggle"></div>
+
+    <!-- Drag Target Area To SlideIn Menu On Small Screens -->
+    <div class="drag-target"></div>
+  </div>
+  <!-- / Layout wrapper -->
+
+  <!-- Core JS -->
+  <!-- build:js assets/vendor/js/core.js -->
+  <script src=".\assets\vendor\libs\jquery\jquery.js"></script>
+  <script src=".\assets\vendor\libs\popper\popper.js"></script>
+  <script src=".\assets\vendor\js\bootstrap.js"></script>
+  <script src=".\assets\vendor\libs\perfect-scrollbar\perfect-scrollbar.js"></script>
+  <script src=".\assets\vendor\libs\node-waves\node-waves.js"></script>
+
+  <script src=".\assets\vendor\libs\hammer\hammer.js"></script>
+  <script src=".\assets\vendor\libs\i18n\i18n.js"></script>
+  <script src=".\assets\vendor\libs\typeahead-js\typeahead.js"></script>
+
+  <script src=".\assets\vendor\js\menu.js"></script>
+  <!-- endbuild -->
+
+  <!-- Vendors JS -->
+  <script src=".\assets\vendor\libs\apex-charts\apexcharts.js"></script>
+  <script src=".\assets\vendor\libs\swiper\swiper.js"></script>
+
+  <!-- Main JS -->
+  <script src=".\assets\js\main.js"></script>
+
+  <!-- Page JS -->
+  <script src=".\assets\js\dashboards-analytics.js"></script>
+</body>
+
+</html>
+
+<!-- beautify ignore:end -->

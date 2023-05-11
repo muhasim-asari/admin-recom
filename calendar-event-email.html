@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <title>Email Template</title>
+    <style>
+      /* Reset styles for email clients */
+      body,
+      table,
+      td,
+      th,
+      p,
+      a {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+
+      table,
+      td {
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+      }
+
+      img {
+        -ms-interpolation-mode: bicubic;
+      }
+
+      /* Custom styles for email */
+      body {
+        font-family: "Inter", Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.4;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        background-color: #FFF;
+      }
+
+      .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 16px 32px;
+        gap: 10px;
+      }
+
+      /* Header styles */
+      .header-logo {
+        padding: 20px;
+        text-align: center;
+      }
+
+      .header-logo img {
+        max-width: 100%;
+        height: auto;
+        width: 150px;
+        object-fit: cover;
+      }
+
+      /* Banner styles */
+      .banner {
+        width: 100%;
+        text-align: center;
+      }
+
+      .banner img {
+        width: 100%;
+        height: 255px;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+
+      hr {
+        border: 1px solid rgba(0, 0, 0, 0.2);
+      }
+
+      .footer-email {
+        width: 55%;
+      }
+
+      .footer-email p,
+      .footer-email h3 {
+        margin: 0;
+      }
+
+      /* Social media icon styles */
+      .social-media {
+        margin: 20px 0;
+        text-align: center;
+      }
+
+      .social-media a {
+        display: inline-block;
+        margin: 0 10px;
+      }
+
+      .social-media img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .copyright {
+        color: #999999;
+        font-size: 12px;
+      }
+
+      @media only screen and (max-width: 768px) {
+        .content-wrapper {
+          padding: 15px;
+        }
+        hr {
+          width: 100%;
+        }
+        .footer-email {
+          width: 100%;
+        }
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="content-wrapper">
+      <!-- Header -->
+      <div class="header-logo">
+        <img src="./assets/img//default-image.png" alt="Logo" />
+      </div>
+
+      <!-- Banner -->
+      <div class="banner">
+        <img src="./assets/img/default-image.png" alt="Banner" />
+      </div>
+
+      <!-- Content -->
+      <div class="content-email">
+        <h1>
+          It’s time to design your email, & Firstname
+        </h1>
+        <p>
+          Now that you've selected a template, you'll define the layout of your
+          email and give your content a place to live by adding, rearranging,
+          and deleting content blocks. When you're ready to change &firstname
+          the look of your email, take a look through the “design” tab to set
+          background colors, borders, and other styles. <br /><br /><br />
+          View on maps:
+          <a href="https://goo.gl/maps/mdxDpzrjdpRSZViRA "
+            >https://goo.gl/maps/mdxDpzrjdpRSZViRA
+          </a>
+        </p>
+      </div>
+
+      <hr width="80%" />
+
+      <div class="footer-email" style="text-align:center">
+        <h3>Azana Hotel</h3>
+        <p>
+          Honggowongso Square, A2, Jl. Honggowongso No.57, Kemlayan, Serengan,
+          Surakarta City, Central Java 57151
+        </p>
+      </div>
+
+      <!-- Social media icons -->
+      <div class="social-media">
+        <a href="https://instagram.com">
+          <object
+            width="18px"
+            height="18px"
+            type="image/svg+xml"
+            data="./assets/img/email-template/instagram.svg"
+          ></object>
+        </a>
+        <a href="https://fb.com">
+          <object
+            width="18px"
+            height="18px"
+            type="image/svg+xml"
+            data="./assets/img/email-template/fb.svg"
+          ></object>
+        </a>
+        <a href="https://twitter.com">
+          <object
+            width="18px"
+            height="18px"
+            type="image/svg+xml"
+            data="./assets/img/email-template/twitter.svg"
+          ></object>
+        </a>
+        <a href="https://web.com">
+          <object
+            width="18px"
+            height="18px"
+            type="image/svg+xml"
+            data="./assets/img/email-template/web.svg"
+          ></object>
+        </a>
+        <a href="https://youtube.com">
+          <object
+            width="18px"
+            height="18px"
+            type="image/svg+xml"
+            data="./assets/img/email-template/youtube.svg"
+          ></object>
+        </a>
+      </div>
+      <div class="copyright">
+        <span>Copyright © 2023</span>
+      </div>
+    </div>
+  </body>
+</html>
