@@ -45,11 +45,20 @@ $(function () {
           searchable: !1,
           orderable: !1,
           render: function (e, t, a, n) {
-            return (
+            if(a.id == 1){
+              return (
               '<button type="button" class="btn btn-outline-secondary me-sm-3 me-1" data-bs-toggle="modal" data-bs-target="#blastEmail"> Blast Email Campaign </button> <button type="button" class="btn btn-outline-secondary me-sm-3 me-1"> <a href="campaign-view.html" class="text-heading text-truncate"><span class="text-nowrap">View Member</span></a> </button> <a href="' +
               l +
               '" class="me-2"><i class="mdi mdi-pencil-outline me-2"></i><span>Edit</span></a><a href="javascript:;" class="text-danger delete-record"><i class="mdi mdi-delete-outline"></i><span>Delete</span></a></div>'
             );
+            } else{
+              return (
+                ' <button type="button" class="btn btn-outline-secondary me-sm-3 me-1"> <a href="campaign-view.html" class="text-heading text-truncate"><span class="text-nowrap">View Member</span></a> </button> <a href="' +
+                l +
+                '" class="me-2"><i class="mdi mdi-pencil-outline me-2"></i><span>Edit</span></a><a href="javascript:;" class="text-danger delete-record"><i class="mdi mdi-delete-outline"></i><span>Delete</span></a></div>'
+              );
+            }
+            
           },
         },
       ],
@@ -65,7 +74,7 @@ $(function () {
           text: '<i class="mdi mdi-plus me-0 me-sm-1"></i><span class="d-none d-sm-inline-block">Add campaign</span>',
           className: "add-new btn btn-primary mx-3",
           action: function () {
-            window.location.href = "./campaign-create.html";
+            window.location.href = "./create-campaign.html";
           },
         },
       ],

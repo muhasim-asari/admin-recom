@@ -114,7 +114,7 @@ $(function () {
             orderable: !1,
             render: function (e, t, a, n) {
               return (
-                '<a href="' +
+                '<a href="./user-change-password.html" class="me-2"><i class="mdi mdi-lock-outline me-2"></i><span>Password</span><a href="' +
                 r +
                 '" class="me-2"><i class="mdi mdi-pencil-outline me-2"></i><span>Edit</span></a><a href="javascript:;" class="text-danger delete-record"><i class="mdi mdi-delete-outline"></i><span>Delete</span></a></div>'
               );

@@ -15,7 +15,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Member View - CRM</title>
+    <title>Member List - CRM</title>
 
     <meta
       name="description"
@@ -110,7 +110,8 @@
     />
     <link
       rel="stylesheet"
-      href=".\assets\vendor\libs\pickr\pickr-themes.css">
+      href=".\assets\vendor\libs\pickr\pickr-themes.css"
+    />
 
     <!-- Page CSS -->
     <link rel="stylesheet" href=".\assets\vendor\css\pages\core-theme.css" />
@@ -396,8 +397,7 @@
 
             <div class="container-xxl flex-grow-1 container-p-y">
               <h4 class="fw-bold py-3 mb-4">
-                <span class="text-muted fw-light">Master Member/</span> Ahmad
-                Abdullah
+                <span class="text-muted fw-light">Master Member/</span> Add Member
               </h4>
 
               <!-- Multi Column with Form Separator -->
@@ -412,7 +412,7 @@
                           id="add-member-fullname"
                           placeholder="John Doe"
                           name="userFullname"
-                          value="Ahmad Abdullah"
+                          value=""
                           aria-label="John Doe"
                         />
                         <label for="add-member-fullname">Full Name</label>
@@ -420,7 +420,7 @@
                     </div>
                     <div class="col-md-6">
                       <div class="form-floating form-floating-outline">
-                        <input type="text" class="form-control flatpickr-input" placeholder="YYYY-MM-DD" id="flatpickr-date" value="1996-03-07" readonly="readonly">
+                        <input type="text" class="form-control flatpickr-input" placeholder="YYYY-MM-DD" id="flatpickr-date" readonly="readonly">
                         <label for="flatpickr-date">Date of Birth</label>
                       </div>
                     </div>
@@ -443,7 +443,7 @@
                           id="add-member-phone-number"
                           placeholder="08967890890"
                           name="phoneNumber"
-                          value="08967890890"
+                          value=""
                           aria-label="08967890890"
                         />
                         <label for="add-member-phone-number">Phone Number</label>
@@ -460,7 +460,7 @@
                             <option value="buddha">Buddha</option>
                             <option value="khonghucu">Khonghucu</option>
                           </select>
-                          <label for="Religion">Religion</label>
+                          <label for="religion">Religion</label>
                         </div>
                       </div>
                     </div>
@@ -475,7 +475,7 @@
                               placeholder="john.doe@example.com"
                               aria-label="john.doe@example.com"
                               name="userEmail"
-                              value="a.abdullah@gmail.com"
+                              value=""
                             />
                             <label for="add-member-email">Email</label>
                           </div>
@@ -543,8 +543,8 @@
     <script src=".\assets\js\main.js"></script>
 
     <!-- Page JS -->
+    <script src=".\assets\js\app-user-list.js"></script>
     <script src=".\assets\js\forms-pickers.js"></script>
-    <script src=".\assets\js\app-hotel-list-2.js"></script>
   </body>
 </html>
 

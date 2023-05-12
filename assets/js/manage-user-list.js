@@ -13,7 +13,6 @@ $(function () {
   i.length &&
     (i = i)
       .wrap('<div class="position-relative"></div>')
-      .select2({ placeholder: "Select Country", dropdownParent: i.parent() }),
     s.length &&
       (e = s.DataTable({
         ajax: assetsPath + "json/user-list.json",
@@ -96,7 +95,7 @@ $(function () {
             orderable: !1,
             render: function (e, t, a, n) {
               return (
-                '<a href="' + r + '" class="me-2"><i class="mdi mdi-pencil-outline me-2"></i><span>Edit</span></a><a href="javascript:;" class="text-danger delete-record"><i class="mdi mdi-delete-outline"></i><span>Delete</span></a></div>'
+                '<a href="./manage-user-change-password.html" class="me-2"><i class="mdi mdi-lock-outline me-2"></i><span>Password</span><a href="' + r + '" class="me-2"><i class="mdi mdi-pencil-outline me-2"></i><span>Edit</span></a><a href="javascript:;" class="text-danger delete-record"><i class="mdi mdi-delete-outline"></i><span>Delete</span></a></div>'
               );
             },
           },
@@ -142,28 +141,7 @@ $(function () {
               return !!a && $('<table class="table"/><tbody />').append(a);
             },
           },
-        },
-        // initComplete: function () {
-        //   this.api()
-        //     .columns(3)
-        //     .every(function () {
-        //       var t = this,
-        //         a = $(
-        //           '<select id="UserRole" class="form-select text-capitalize"><option value=""> Select Role </option></select>'
-        //         )
-        //           .appendTo(".user_role")
-        //           .on("change", function () {
-        //             var e = $.fn.dataTable.util.escapeRegex($(this).val());
-        //             t.search(e ? "^" + e + "$" : "", !0, !1).draw();
-        //           });
-        //       t.data()
-        //         .unique()
-        //         .sort()
-        //         .each(function (e, t) {
-        //           a.append('<option value="' + e + '">' + e + "</option>");
-        //         });
-        //     })
-        // },
+        }
       })),
     $(".datatables-manage-users tbody").on("click", ".delete-record", function () {
       e.row($(this).parents("tr")).remove().draw();

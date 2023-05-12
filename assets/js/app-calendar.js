@@ -113,7 +113,7 @@ isRtl && (direction = "rtl"),
           })),
         Y && (e = Y.flatpickr({ monthSelectorType: "static", inline: !0 }));
       let i = new Calendar(v, {
-        initialView: "dayGridMonth",
+        initialView: "listMonth",
         events: function (e, t) {
           let n = (function () {
             let t = [],
@@ -141,7 +141,7 @@ isRtl && (direction = "rtl"),
         customButtons: { sidebarToggle: { text: "Sidebar" } },
         headerToolbar: {
           start: "sidebarToggle, prev,next, title",
-          end: "dayGridMonth,timeGridWeek,timeGridDay,listMonth",
+          end: "dayGridMonth,listMonth",
         },
         direction: direction,
         initialDate: new Date(),

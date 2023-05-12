@@ -58,7 +58,7 @@ $(function () {
           orderable: !1,
           render: function (e, t, a, n) {
             return (
-              '<a href="./member-history.html" class="me-2 text-warning"><i class="mdi mdi-history me-2"></i><span>History</span></a><a href="' + l + '" class="me-2"><i class="mdi mdi-pencil-outline me-2"></i><span>Edit</span></a><a href="javascript:;" class="text-danger delete-record me-2"><i class="mdi mdi-delete-outline"></i><span>Delete</span></a></div>'
+              '<div class="d-inline-block text-nowrap"><button class="btn btn-sm btn-icon btn-text-secondary rounded-pill btn-icon dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical mdi-20px"></i></button><div class="dropdown-menu dropdown-menu-end m-0"><a href="./member-history.html" class="me-2 text-warning dropdown-item"><i class="mdi mdi-history me-2"></i><span>History</span></a><a href="' + l + '" class="me-2 dropdown-item"><i class="mdi mdi-pencil-outline me-2"></i><span>Edit</span></a><a href="javascript:;" class="text-danger dropdown-item delete-record me-2"><i class="mdi mdi-delete-outline me-2"></i><span>Delete</span></a></div></div></div>'
             );
           },
         },
@@ -148,3 +148,25 @@ $(function () {
       }
     );
 });
+// mendapatkan elemen 'select' dan 'input'
+const select = document.getElementById('selectedFilter');
+const input = document.getElementById('inputDateFilter');
+const wrapperSelect = document.getElementById('wrapperSelect');
+
+// menambahkan event listener pada 'select'
+select.addEventListener('change', () => {
+  // mendapatkan nilai 'value' dari 'select'
+  const value = select.value;
+
+  // menampilkan atau menyembunyikan elemen 'input' berdasarkan nilai 'value' dari 'select'
+  if (value === 'true') {
+    input.style.display = 'block';
+    wrapperSelect.classList.add("col-md-6");
+    wrapperSelect.classList.remove("col-md-12");
+  } else {
+    input.style.display = 'none';
+    wrapperSelect.classList.remove("col-md-6");
+    wrapperSelect.classList.add("col-md-12");
+  }
+});
+

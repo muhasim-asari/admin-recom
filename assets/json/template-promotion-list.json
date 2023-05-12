@@ -1,0 +1,19 @@
+{
+    "data": [
+      {
+        "id": 1,
+        "template_code": "HR0694",
+        "name_promotion": "promotion 1"
+      },
+      {
+        "id": 2,
+        "template_code": "HR0695",
+        "name_promotion": "promotion 2"
+      },
+      {
+        "id": 3,
+        "template_code": "HR0696",
+        "name_promotion": "promotion 3"
+      }
+    ]
+  }
