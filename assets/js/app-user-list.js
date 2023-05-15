@@ -13,12 +13,10 @@ $(function () {
   i.length &&
     (i = i)
       .wrap('<div class="position-relative"></div>')
-      .select2({ placeholder: "Select Country", dropdownParent: i.parent() }),
     s.length &&
       (e = s.DataTable({
         ajax: assetsPath + "json/user-list-2.json",
         columns: [
-          { data: "" },
           { data: "full_name" },
           { data: "full_name" },
           { data: "email" },
@@ -38,18 +36,6 @@ $(function () {
           },
           {
             targets: 1,
-            orderable: !1,
-            render: function () {
-              return '<input type="checkbox" class="dt-checkboxes form-check-input">';
-            },
-            checkboxes: {
-              selectAllRender:
-                '<input type="checkbox" class="form-check-input">',
-            },
-            responsivePriority: 4,
-          },
-          {
-            targets: 2,
             responsivePriority: 4,
             render: function (e, t, a, n) {
               var s = a.full_name,
@@ -85,13 +71,13 @@ $(function () {
             },
           },
           {
-            targets: 3,
+            targets: 2,
             render: function (e) {
               return '<span class="text-heading">' + e + "</span>";
             },
           },
           {
-            targets: 4,
+            targets: 3,
             render: function (e, t, a, n) {
               a = a.role;
               return (

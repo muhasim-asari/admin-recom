@@ -5,7 +5,6 @@ isRtl && (direction = "rtl"),
     {
       const v = document.getElementById("calendar"),
         m = document.querySelector(".app-calendar-sidebar"),
-        p = document.getElementById("addEventSidebar"),
         f = document.querySelector(".app-overlay"),
         g = {
           Holiday: "danger",
@@ -17,9 +16,7 @@ isRtl && (direction = "rtl"),
         Y = document.querySelector(".inline-calendar");
       let a,
         l = events,
-        r = !1,
         e;
-      const C = new bootstrap.Offcanvas(p);
       function t(e) {
         return e.id
           ? "<span class='badge badge-dot bg-" +

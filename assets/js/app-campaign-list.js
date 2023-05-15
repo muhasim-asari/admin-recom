@@ -74,7 +74,7 @@ $(function () {
           text: '<i class="mdi mdi-plus me-0 me-sm-1"></i><span class="d-none d-sm-inline-block">Add campaign</span>',
           className: "add-new btn btn-primary mx-3",
           action: function () {
-            window.location.href = "./create-campaign.html";
+            window.location.href = "./campaign-create.html";
           },
         },
       ],
