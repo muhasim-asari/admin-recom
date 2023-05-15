@@ -12,7 +12,6 @@ let date = new Date(),
   events = [
     {
       id: 1,
-      url: "",
       title: "Hari Buruh",
       start: new Date(date.getFullYear(), date.getMonth() + 1, -30),
       end: new Date(date.getFullYear(), date.getMonth() + 1, -30),
@@ -21,7 +20,6 @@ let date = new Date(),
     },
     {
       id: 2,
-      url: "",
       title: "Hari Raya Waisak",
       start: new Date(date.getFullYear(), date.getMonth() + 1, -25),
       end: new Date(date.getFullYear(), date.getMonth() + 1, -25),
@@ -30,7 +28,6 @@ let date = new Date(),
     },
     {
       id: 5,
-      url: "",
       title: "Kenaikan Isa Al Masih",
       start: new Date(date.getFullYear(), date.getMonth() + 1, -13),
       end: new Date(date.getFullYear(), date.getMonth() + 1, -13),

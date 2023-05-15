@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html
   lang="en"
@@ -15,9 +15,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>
-      Fullcalendar - CRM
-    </title>
+    <title>Calendar Update - CRM</title>
 
     <meta
       name="description"
@@ -30,7 +28,7 @@
     <!-- Canonical SEO -->
     <link
       rel="canonical"
-      href="\item\materialize-material-design-admin-template\11446068.html"
+      href="\..\item\materialize-material-design-admin-template\11446068.html"
     />
 
     <!-- Favicon -->
@@ -83,28 +81,29 @@
     />
     <link
       rel="stylesheet"
-      href=".\assets\vendor\libs\fullcalendar\fullcalendar.css"
+      href=".\assets\vendor\libs\datatables-bs5\datatables.bootstrap5.css"
     />
     <link
       rel="stylesheet"
-      href=".\assets\vendor\libs\flatpickr\flatpickr.css"
+      href=".\assets\vendor\libs\datatables-responsive-bs5\responsive.bootstrap5.css"
     />
     <link
       rel="stylesheet"
-      href=".\assets\vendor\libs\select2\select2.css"
+      href=".\assets\vendor\libs\datatables-buttons-bs5\buttons.bootstrap5.css"
     />
-    <link rel="stylesheet" href=".\assets\vendor\libs\quill\editor.css" />
+    <link
+      rel="stylesheet"
+      href=".\assets\vendor\libs\datatables-checkboxes-jquery\datatables.checkboxes.css"
+    />
+    <link rel="stylesheet" href=".\assets\vendor\libs\select2\select2.css" />
     <link
       rel="stylesheet"
       href=".\assets\vendor\libs\formvalidation\dist\css\formValidation.min.css"
     />
 
     <!-- Page CSS -->
+    <link rel="stylesheet" href=".\assets\vendor\css\pages\core-theme.css" />
 
-    <link
-      rel="stylesheet"
-      href=".\assets\vendor\css\pages\core-theme.css"
-    />
     <!-- Helpers -->
     <script src=".\assets\vendor\js\helpers.js"></script>
 
@@ -116,7 +115,6 @@
   </head>
 
   <body>
-
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
       <div class="layout-container">
@@ -175,7 +173,9 @@
             </li>
             <li class="menu-item">
               <a href="./user-list.html" class="menu-link">
-                <i class="menu-icon tf-icons mdi mdi-account-multiple-outline"></i>
+                <i
+                  class="menu-icon tf-icons mdi mdi-account-multiple-outline"
+                ></i>
                 <div data-i18n="Master User">Master User</div>
               </a>
             </li>
@@ -187,9 +187,7 @@
             </li>
             <li class="menu-item">
               <a href="./member-list.html" class="menu-link">
-                <i
-                  class="menu-icon tf-icons mdi mdi-account-group-outline"
-                ></i>
+                <i class="menu-icon tf-icons mdi mdi-account-group-outline"></i>
                 <div data-i18n="Master Member">Master Member</div>
               </a>
             </li>
@@ -228,7 +226,9 @@
             </li>
             <li class="menu-item active">
               <a href="./calendar.html" class="menu-link">
-                <i class="menu-icon tf-icons mdi mdi-calendar-blank-outline"></i>
+                <i
+                  class="menu-icon tf-icons mdi mdi-calendar-blank-outline"
+                ></i>
                 <div data-i18n="Calendar">Calendar</div>
               </a>
             </li>
@@ -282,7 +282,6 @@
               <!-- /Search -->
 
               <ul class="navbar-nav flex-row align-items-center ms-auto">
-
                 <!-- User -->
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
                   <a
@@ -380,231 +379,312 @@
           </nav>
 
           <!-- / Navbar -->
-
           <!-- Content wrapper -->
           <div class="content-wrapper">
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
-              <div class="card app-calendar-wrapper">
-                <div class="row g-0">
-                  <!-- Calendar Sidebar -->
-                  <div
-                    class="col app-calendar-sidebar pt-1"
-                    id="app-calendar-sidebar"
-                  >
-                    <div class="p-3 pb-2 my-sm-0 mb-3">
-                      <div class="d-grid">
-                        <a href="./calendar-create.html" class="btn btn-primary btn-toggle-sidebar">
-                          <i class="mdi mdi-plus me-1"></i>
-                          <span class="align-middle">Add Event</span>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="p-4">
-                      <!-- inline calendar (flatpicker) -->
-                      <div class="inline-calendar"></div>
+              <h4 class="fw-bold py-3 mb-4">
+                <span class="text-muted fw-light">Calendar/</span> Kenaikan Isa Al Masih
+              </h4>
 
-                      <hr class="container-m-nx my-4" />
-                    </div>
-                  </div>
-                  <!-- /Calendar Sidebar -->
-
-                  <!-- Calendar & Modal -->
-                  <div class="col app-calendar-content">
-                    <div
-                      class="card shadow-none border-0 border-start rounded-0"
-                    >
-                      <div class="card-body pb-0">
-                        <!-- FullCalendar -->
-                        <div id="calendar"></div>
+              <!-- Multi Column with Form Separator -->
+              <form action="#"></form>
+              <div class="card mb-4">
+                <div class="card-body">
+                  <div class="row g-4">
+                    <div class="col-md-12">
+                      <div class="input-group input-group-merge">
+                        <div class="form-floating form-floating-outline">
+                          <select id="type" class="form-select">
+                            <option value="repeat">Repeat (Yearly)</option>
+                            <option value="one-time">One-Time Event</option>
+                          </select>
+                          <label for="type">Choose Type</label>
+                        </div>
                       </div>
                     </div>
-                    <div class="app-overlay"></div>
-                    <!-- FullCalendar Offcanvas -->
-                    <div
-                      class="offcanvas offcanvas-end event-sidebar"
-                      tabindex="-1"
-                      id="addEventSidebar"
-                      aria-labelledby="addEventSidebarLabel"
-                    >
-                      <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="addEventSidebarLabel">
-                          Add Event
-                        </h5>
-                        <button
-                          type="button"
-                          class="btn-close text-reset"
-                          data-bs-dismiss="offcanvas"
-                          aria-label="Close"
-                        ></button>
+                    <div class="col-md-6">
+                      <div class="input-group input-group-merge">
+                        <div class="form-floating form-floating-outline">
+                          <select id="date" class="form-select">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                          </select>
+                          <label for="date">Date</label>
+                        </div>
                       </div>
-                      <div class="offcanvas-body">
-                        <form
-                          class="event-form pt-0"
-                          id="eventForm"
-                          onsubmit="return false"
+                    </div>
+                    <div class="col-md-6">
+                      <div class="input-group input-group-merge">
+                        <div class="form-floating form-floating-outline">
+                          <select id="dateMonth" class="form-select">
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                          </select>
+                          <label for="dateMonth">Month</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-floating form-floating-outline">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="add-calendar-event"
+                          placeholder="HUT Grand Amira Hotel "
+                          name="eventName"
+                          value=""
+                          aria-label="HUT Grand Amira Hotel"
+                        />
+                        <label for="add-calendar-event">Event Name</label>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-floating form-floating-outline">
+                        <textarea
+                          class="form-control h-px-100"
+                          id="descriptionEvent"
+                          placeholder="Celebrating the Grand Amira Hotel Anniversary with various festivals and room discounts."
+                          aria-label="Description Event"
+                          aria-describedby="Description Event"
                         >
-                          <div class="form-floating form-floating-outline mb-4">
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="eventTitle"
-                              name="eventTitle"
-                              placeholder="Event Title"
-                            />
-                            <label for="eventTitle">Title</label>
-                          </div>
-                          <div class="form-floating form-floating-outline mb-4">
-                            <select
-                              class="select2 select-event-label form-select"
-                              id="eventLabel"
-                              name="eventLabel"
-                            >
-                              <option
-                                data-label="primary"
-                                value="Business"
-                                selected=""
-                              >
-                                Business
-                              </option>
-                              <option data-label="danger" value="Personal">
-                                Personal
-                              </option>
-                              <option data-label="warning" value="Family">
-                                Family
-                              </option>
-                              <option data-label="success" value="Holiday">
-                                Holiday
-                              </option>
-                              <option data-label="info" value="ETC">ETC</option>
-                            </select>
-                            <label for="eventLabel">Label</label>
-                          </div>
-                          <div class="form-floating form-floating-outline mb-4">
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="eventStartDate"
-                              name="eventStartDate"
-                              placeholder="Start Date"
-                            />
-                            <label for="eventStartDate">Start Date</label>
-                          </div>
-                          <div class="form-floating form-floating-outline mb-4">
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="eventEndDate"
-                              name="eventEndDate"
-                              placeholder="End Date"
-                            />
-                            <label for="eventEndDate">End Date</label>
-                          </div>
-                          <div class="mb-3">
-                            <label class="switch">
-                              <input
-                                type="checkbox"
-                                class="switch-input allDay-switch"
-                              />
-                              <span class="switch-toggle-slider">
-                                <span class="switch-on"></span>
-                                <span class="switch-off"></span>
-                              </span>
-                              <span class="switch-label">All Day</span>
-                            </label>
-                          </div>
-                          <div class="form-floating form-floating-outline mb-4">
-                            <input
-                              type="url"
-                              class="form-control"
-                              id="eventURL"
-                              name="eventURL"
-                              placeholder="https://www.google.com"
-                            />
-                            <label for="eventURL">Event URL</label>
-                          </div>
-                          <div
-                            class="form-floating form-floating-outline mb-4 select2-primary"
-                          >
-                            <select
-                              class="select2 select-event-guests form-select"
-                              id="eventGuests"
-                              name="eventGuests"
-                              multiple=""
-                            >
-                              <option data-avatar="1.png" value="Jane Foster">
-                                Jane Foster
-                              </option>
-                              <option data-avatar="3.png" value="Donna Frank">
-                                Donna Frank
-                              </option>
-                              <option
-                                data-avatar="5.png"
-                                value="Gabrielle Robertson"
-                              >
-                                Gabrielle Robertson
-                              </option>
-                              <option data-avatar="7.png" value="Lori Spears">
-                                Lori Spears
-                              </option>
-                              <option data-avatar="9.png" value="Sandy Vega">
-                                Sandy Vega
-                              </option>
-                              <option data-avatar="11.png" value="Cheryl May">
-                                Cheryl May
-                              </option>
-                            </select>
-                            <label for="eventGuests">Add Guests</label>
-                          </div>
-                          <div class="form-floating form-floating-outline mb-4">
-                            <input
-                              type="text"
-                              class="form-control"
-                              id="eventLocation"
-                              name="eventLocation"
-                              placeholder="Enter Location"
-                            />
-                            <label for="eventLocation">Location</label>
-                          </div>
-                          <div class="form-floating form-floating-outline mb-4">
-                            <textarea
-                              class="form-control"
-                              name="eventDescription"
-                              id="eventDescription"
-                            ></textarea>
-                            <label for="eventDescription">Description</label>
-                          </div>
-                          <div
-                            class="mb-3 d-flex justify-content-sm-between justify-content-start my-4 gap-2"
-                          >
-                            <div class="d-flex">
-                              <button
-                                type="submit"
-                                class="btn btn-primary btn-add-event me-sm-2 me-1"
-                              >
-                                Add
-                              </button>
-                              <button
-                                type="reset"
-                                class="btn btn-label-secondary btn-cancel me-sm-0 me-1"
-                                data-bs-dismiss="offcanvas"
-                              >
-                                Cancel
-                              </button>
-                            </div>
-                            <button
-                              class="btn btn-label-danger btn-delete-event d-none"
-                            >
-                              Delete
-                            </button>
-                          </div>
-                        </form>
+Celebrating the Grand Amira Hotel Anniversary with various festivals and room discounts.</textarea
+                        >
+                        <label for="descriptionEvent">Description</label>
                       </div>
                     </div>
                   </div>
-                  <!-- /Calendar & Modal -->
                 </div>
+              </div>
+
+              <div class="card mb-4">
+                <h5 class="card-header">SET TARGET</h5>
+                <div class="card-body">
+                  <div class="row g-4">
+                    <div class="col-md-12">
+                      <div class="input-group input-group-merge">
+                        <div class="form-floating form-floating-outline">
+                          <select id="target" class="form-select">
+                            <option value="all">All</option>
+                            <option value="custom">Custom</option>
+                          </select>
+                          <label for="target">Select Target</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="input-group input-group-merge">
+                        <div class="form-floating form-floating-outline">
+                          <select id="gender" class="form-select">
+                            <option value="all">All</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                          </select>
+                          <label for="gender">Gender</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-floating form-floating-outline">
+                        <div class="select2-primary">
+                          <select
+                            id="selectReligion"
+                            class="select2 form-select"
+                            multiple=""
+                          >
+                            <option value="Islam" selected="">Islam</option>
+                            <option value="Kristen" selected="">Kristen</option>
+                            <option value="Katolik">Katolik</option>
+                            <option value="Hindu">Hindu</option>
+                            <option value="Buddha">Buddha</option>
+                            <option value="Khonghucu">Khonghucu</option>
+                          </select>
+                        </div>
+                        <label for="selectReligion">Religion</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-4">
+                <h5 class="card-header">LINK TO CALENDER EVENT TEMPLATE</h5>
+                <div class="card-body">
+                  <div class="row g-4">
+                    <div class="col-md-12">
+                      <div
+                        class="dt-action-buttons text-xl-end text-lg-start text-md-end text-start d-flex align-items-center justify-content-end flex-md-row flex-column mb-3 mb-md-0"
+                      >
+                        <div
+                          id="DataTables_Table_0_filter"
+                          class="dataTables_filter"
+                        >
+                          <label
+                            ><input
+                              type="search"
+                              class="form-control form-control-sm"
+                              placeholder="Search.."
+                              aria-controls="DataTables_Table_0"
+                          /></label>
+                        </div>
+                        <div class="dt-buttons btn-group flex-wrap">
+                          <a
+                            href="./template-calendar-event-create.html"
+                            class="btn btn-secondary add-new btn-primary mx-3"
+                            aria-controls="Create Template"
+                          >
+                            <span
+                              ><i class="mdi mdi-plus me-0 me-sm-1"></i
+                              ><span class="d-none d-sm-inline-block"
+                                >Create Template</span
+                              ></span
+                            >
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-check mb-3">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="templateOptions"
+                          id="template1"
+                          value="F101"
+                        />
+                        <label class="form-check-label" for="template1"
+                          >F101 - Festival</label
+                        >
+                        <a
+                          href="./preview-mode-calendar-event.html"
+                          class="mx-2"
+                          target="_blank"
+                          >Preview</a
+                        >
+                      </div>
+                      <div class="form-check mb-3">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="templateOptions"
+                          id="template2"
+                          value="F200"
+                        />
+                        <label class="form-check-label" for="template2"
+                          >F200 - Festival Bananaco 1</label
+                        >
+                        <a
+                          href="./preview-mode-calendar-event.html"
+                          class="mx-2"
+                          target="_blank"
+                          >Preview</a
+                        >
+                      </div>
+                      <div class="form-check mb-3">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="templateOptions"
+                          id="template3"
+                          value="F120"
+                        />
+                        <label class="form-check-label" for="template3"
+                          >F120 - Festival Bananaco 2</label
+                        >
+                        <a
+                          href="./preview-mode-calendar-event.html"
+                          class="mx-2"
+                          target="_blank"
+                          >Preview</a
+                        >
+                      </div>
+                      <div class="form-check mb-3">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="templateOptions"
+                          id="template4"
+                          value="B100"
+                        />
+                        <label class="form-check-label" for="template4"
+                          >B100 - Good Friday 2</label
+                        >
+                        <a
+                          href="./preview-mode-calendar-event.html"
+                          class="mx-2"
+                          target="_blank"
+                          >Preview</a
+                        >
+                      </div>
+                      <div class="form-check mb-3">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="templateOptions"
+                          id="template5"
+                          value="B100"
+                        />
+                        <label class="form-check-label" for="template5"
+                          >B100 - Good Friday 1</label
+                        >
+                        <a
+                          href="./preview-mode-calendar-event.html"
+                          class="mx-2"
+                          target="_blank"
+                          >Preview</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row g-4">
+                <div class="pt-2">
+                <button type="submit" class="btn btn-primary me-sm-3 me-1">
+                  Save Change
+                </button>
+                <button type="reset" class="btn btn-label-secondary">
+                  Cancel
+                </button>
               </div>
             </div>
             <!-- / Content -->
@@ -623,7 +703,7 @@
       <div class="drag-target"></div>
     </div>
     <!-- / Layout wrapper -->
-    
+
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
     <script src=".\assets\vendor\libs\jquery\jquery.js"></script>
@@ -640,20 +720,20 @@
     <!-- endbuild -->
 
     <!-- Vendors JS -->
-    <script src=".\assets\vendor\libs\fullcalendar\fullcalendar.js"></script>
+    <script src=".\assets\vendor\libs\moment\moment.js"></script>
+    <script src=".\assets\vendor\libs\select2\select2.js"></script>
+    <script src=".\assets\vendor\libs\datatables-bs5\datatables-bootstrap5.js"></script>
+    <script src=".\assets\vendor\libs\select2\select2.js"></script>
     <script src=".\assets\vendor\libs\formvalidation\dist\js\FormValidation.min.js"></script>
     <script src=".\assets\vendor\libs\formvalidation\dist\js\plugins\Bootstrap5.min.js"></script>
     <script src=".\assets\vendor\libs\formvalidation\dist\js\plugins\AutoFocus.min.js"></script>
-    <script src=".\assets\vendor\libs\select2\select2.js"></script>
-    <script src=".\assets\vendor\libs\flatpickr\flatpickr.js"></script>
-    <script src=".\assets\vendor\libs\moment\moment.js"></script>
+    <script src=".\assets\vendor\libs\cleavejs\cleave.js"></script>
+    <script src=".\assets\vendor\libs\cleavejs\cleave-phone.js"></script>
 
     <!-- Main JS -->
     <script src=".\assets\js\main.js"></script>
-
+    <script src=".\assets\js\forms-selects.js"></script>
     <!-- Page JS -->
-    <script src=".\assets\js\app-calendar-events.js"></script>
-    <script src=".\assets\js\app-calendar.js"></script>
   </body>
 </html>
 
