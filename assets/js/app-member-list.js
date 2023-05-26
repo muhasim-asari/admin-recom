@@ -7,30 +7,32 @@ $(function () {
     (e = t.DataTable({
       ajax: assetsPath + "json/member-list.json",
       columns: [
-        { data: "" },
         { data: "full_name" },
         { data: "full_name" },
+        { data: "date_of_birth" },
+        { data: "religion" },
         { data: "email" },
         { data: "last_checkin" },
-        { data: "place" },
-        { data: "" },
       ],
       columnDefs: [
         {
-          className: "control",
-          orderable: !1,
-          searchable: !1,
+          searchable: 1,
           responsivePriority: 2,
           targets: 0,
           render: function (e, t, a, n) {
-            return '<span>Detail</span>';
+            return '<span>'+ a.full_name +'</span>';
           },
         },
-        { targets: 1, searchable: !1, visible: !1 },
+        {
+          targets: 1,
+          render: function (e, t, a, n) {
+            return '<span class="text-nowrap">' + a.date_of_birth + "</span>";
+          },
+        },
         {
           targets: 2,
           render: function (e, t, a, n) {
-            return '<span class="text-nowrap">' + a.full_name + "</span>";
+            return '<span class="text-nowrap">' + a.religion + "</span>";
           },
         },
         {
@@ -42,13 +44,7 @@ $(function () {
         {
           targets: 4,
           render: function (e, t, a, n) {
-            return '<span class="text-nowrap">' + a.last_checkin + "</span>";
-          },
-        },
-        {
-          targets: 5,
-          render: function (e, t, a, n) {
-            return '<span class="text-nowrap">' + a.place + "</span>";
+            return '<span class="text-nowrap">' + a.last_checkin + "</span>" + '<br/>' + a.place ;
           },
         },
         {
@@ -86,32 +82,6 @@ $(function () {
             }
         },
       ],
-      responsive: {
-        details: {
-          display: $.fn.dataTable.Responsive.display.modal({
-            header: function (e) {
-              return "Details of " + e.data().full_name;
-            },
-          }),
-          type: "column",
-          renderer: function (e, t, a) {
-            a = $.map(a, function (e, t) {
-              return "" !== e.title
-                ? '<tr data-dt-row="' +
-                    e.rowIndex +
-                    '" data-dt-column="' +
-                    e.columnIndex +
-                    '"><td>' +
-                    e.title +
-                    ":</td> <td>" +
-                    e.data +
-                    "</td></tr>"
-                : "";
-            }).join("");
-            return !!a && $('<table class="table"/><tbody />').append(a);
-          },
-        },
-      },
       initComplete: function () {
         this.api()
           .columns(3)

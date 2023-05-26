@@ -4,7 +4,6 @@
     t = document.querySelector("#flatpickr-time"),
     a = document.querySelector("#flatpickr-datetime"),
     i = document.querySelector("#flatpickr-multi"),
-    r = document.querySelector("#flatpickr-range"),
     n = document.querySelector("#flatpickr-inline"),
     o = document.querySelector("#flatpickr-human-friendly"),
     l = document.querySelector("#flatpickr-disabled-range");
@@ -18,7 +17,6 @@
         mode: "multiple",
         minDate: "today",
       }),
-    null != typeof r && r.flatpickr({ mode: "range" }),
     n &&
       n.flatpickr({ inline: !0, allowInput: !1, monthSelectorType: "static" }),
     o &&

@@ -16,6 +16,7 @@ $(function () {
           { data: "template_code" },
           { data: "template_code" },
           { data: "name_promotion" },
+          { data: "subject" },
           { data: "action" },
         ],
         columnDefs: [
@@ -55,6 +56,12 @@ $(function () {
           },
           {
             targets: 3,
+            render: function (e) {
+              return '<span class="text-heading">' + e + "</span>";
+            },
+          },
+          {
+            targets: 4,
             render: function (e) {
               return '<span class="text-heading">' + e + "</span>";
             },

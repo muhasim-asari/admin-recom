@@ -16,6 +16,7 @@ $(function () {
           { data: "template_code" },
           { data: "template_code" },
           { data: "name_campaign" },
+          { data: "subject" },
           { data: "action" },
         ],
         columnDefs: [
@@ -55,8 +56,16 @@ $(function () {
           },
           {
             targets: 3,
-            render: function (e) {
-              return '<span class="text-heading">' + e + "</span>";
+            render: function (e, t, a, n) {
+              var name = a.name_campaign
+              return '<span class="text-heading">' + name + "</span>";
+            },
+          },
+          {
+            targets: 4,
+            render: function (e, t, a, n) {
+              var subject = a.subject
+              return '<span class="text-heading">' + subject + "</span>";
             },
           },
           {

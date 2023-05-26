@@ -196,7 +196,7 @@
                 <div class="iframe-wrapper full-height">
                   <iframe
                     class="iframe-email-preview full-height"
-                    src="./calendar-event-email.html"
+                    src="./calendar-event-email-simply.html"
                     frameborder="0"
                   ></iframe>
                 </div>
@@ -211,16 +211,29 @@
                     <h5 class="card-header">Event Name</h5>
                     <div class="card-body">
                       <form action="#">
+                        <div class="form-floating form-floating-outline mb-4">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="add-template-name"
+                            placeholder="Eid Fitr 2024"
+                            name="Template Name"
+                            value="Eid Fitr 2024"
+                            aria-label="Eid Fitr 2024"
+                          />
+                          <label for="add-template-name">Template Name</label>
+                        </div>
                         <div class="form-floating form-floating-outline">
                           <input
                             type="text"
                             class="form-control"
-                            id="eventName"
-                            placeholder="eventName"
-                            aria-describedby="eventName"
-                            value="Indonesian Independence Day"
+                            id="add-subject"
+                            placeholder="Selamat Hari Lebaran 1445H!"
+                            name="Event Name"
+                            value="Selamat Hari Lebaran 1445H!"
+                            aria-label="Selamat Hari Lebaran 1445H!"
                           />
-                          <label for="eventName">Event Name</label>
+                          <label for="add-subject">Subject for Email</label>
                         </div>
                         <div class="mt-3 text-end">
                           <button
@@ -265,7 +278,8 @@
                                   <span class="note needsclick">
                                     (Ensure min image ratio 150 × 43 px,
                                     transparent background (.png)
-                                    recommended)</span
+                                    recommended) with max size of
+                                    150kb</span
                                   >
                                 </div>
                                 <div class="fallback">
@@ -317,7 +331,7 @@
                                   <span class="note needsclick">
                                     (Ensure min image ratio 1920 × 1280 px, only
                                     jpg, png and webp with max size of
-                                    1mb)</span
+                                    400kb)</span
                                   >
                                 </div>
                                 <div class="fallback">
@@ -375,6 +389,10 @@
                                 <a href="https://goo.gl/maps/mdxDpzrjdpRSZViRA "
                                   >https://goo.gl/maps/mdxDpzrjdpRSZViRA
                                 </a>
+                              </div>
+                              <div class="pt-2 px-2">
+                                <strong>Notes</strong>
+                                <p>* Untuk Menyematkan nama member bisa menggunakan #memberName di dalam body text.</p>
                               </div>
                               <div class="mt-3 text-end">
                                 <button
