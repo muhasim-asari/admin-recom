@@ -1,0 +1,34 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "asset_code": "11-56-43-56-43-33",
+      "asset_name": "Komputer",
+      "total_tags": 12,
+      "missing_tags": 3,
+      "missing_asset": 0,
+      "asset_dislocation": 0,
+      "asset_out": 0
+    },
+    {
+      "id": 2,
+      "asset_code": "22-34-56-78-90-12",
+      "asset_name": "Printer",
+      "total_tags": 8,
+      "missing_tags": 1,
+      "missing_asset": 1,
+      "asset_dislocation": 0,
+      "asset_out": 0
+    },
+    {
+      "id": 3,
+      "asset_code": "45-67-89-10-32-54",
+      "asset_name": "Laptop",
+      "total_tags": 15,
+      "missing_tags": 0,
+      "missing_asset": 0,
+      "asset_dislocation": 1,
+      "asset_out": 0
+    }
+  ]
+}

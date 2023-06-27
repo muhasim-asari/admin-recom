@@ -1,0 +1,46 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "unit_of_measurement_name": "Meter",
+      "abbreviation": "m",
+      "status": "active"
+    },
+    {
+      "id": 2,
+      "unit_of_measurement_name": "Kilogram",
+      "abbreviation": "kg",
+      "status": "active"
+    },
+    {
+      "id": 3,
+      "unit_of_measurement_name": "Liter",
+      "abbreviation": "L",
+      "status": "active"
+    },
+    {
+      "id": 4,
+      "unit_of_measurement_name": "Piece",
+      "abbreviation": "pcs",
+      "status": "active"
+    },
+    {
+      "id": 5,
+      "unit_of_measurement_name": "Square Meter",
+      "abbreviation": "m²",
+      "status": "active"
+    },
+    {
+      "id": 6,
+      "unit_of_measurement_name": "Cubic Meter",
+      "abbreviation": "m³",
+      "status": "active"
+    },
+    {
+      "id": 7,
+      "unit_of_measurement_name": "Gram",
+      "abbreviation": "g",
+      "status": "active"
+    }
+  ]
+}

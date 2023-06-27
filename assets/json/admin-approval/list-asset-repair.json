@@ -1,0 +1,94 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "asset_repair_created_date": "12-June-2023",
+      "asset_repair_approval_date": "14-June-2023",
+      "transaction_number": "TRN-001",
+      "status": "Complete",
+      "person_in_charge": {
+        "department": "IT Department",
+        "name": "John Doe"
+      },
+      "asset_repair_date": "16-June-2023",
+      "asset_repair_completed_date": "17-June-2023",
+      "asset_destination": "Storage Room",
+      "information": "Waiting for repair process to be completed"
+    },
+    {
+      "id": 2,
+      "asset_repair_created_date": "13-June-2023",
+      "asset_repair_approval_date": "15-June-2023",
+      "transaction_number": "TRN-002",
+      "status": "Reject",
+      "person_in_charge": {
+        "department": "Finance Department",
+        "name": "Jane Smith"
+      },
+      "asset_repair_date": "17-June-2023",
+      "asset_repair_completed_date": "",
+      "asset_destination": "Warehouse",
+      "information": "Waiting for repair request to be approved"
+    },
+    {
+      "id": 3,
+      "asset_repair_created_date": "14-June-2023",
+      "asset_repair_approval_date": "16-June-2023",
+      "transaction_number": "TRN-003",
+      "status": "Waiting Approval",
+      "person_in_charge": {
+        "department": "HR Department",
+        "name": "David Johnson"
+      },
+      "asset_repair_date": "",
+      "asset_repair_completed_date": "",
+      "asset_destination": "",
+      "information": "Waiting for repair request to be approved"
+    },
+    {
+      "id": 4,
+      "asset_repair_created_date": "15-June-2023",
+      "asset_repair_approval_date": "17-June-2023",
+      "transaction_number": "TRN-004",
+      "status": "Waiting Completed",
+      "person_in_charge": {
+        "department": "Operations Department",
+        "name": "Amy Lee"
+      },
+      "asset_repair_date": "19-June-2023",
+      "asset_repair_completed_date": "",
+      "asset_destination": "Server Room",
+      "information": "Waiting for repair process to be completed"
+    },
+    {
+      "id": 5,
+      "asset_repair_created_date": "16-June-2023",
+      "asset_repair_approval_date": "18-June-2023",
+      "transaction_number": "TRN-005",
+      "status": "Waiting Asset Repair",
+      "person_in_charge": {
+        "department": "Marketing Department",
+        "name": "Mark Davis"
+      },
+      "asset_repair_date": "",
+      "asset_repair_completed_date": "",
+      "asset_destination": "Office Room",
+      "information": "Waiting for repair request to be processed"
+    },
+    {
+      "id": 6,
+      "asset_repair_created_date": "17-June-2023",
+      "asset_repair_approval_date": "",
+      "transaction_number": "TRN-006",
+      "status": "Waiting Approval",
+      "person_in_charge": {
+        "department": "Sales Department",
+        "name": "Emily Wilson"
+      },
+      "asset_repair_date": "",
+      "asset_repair_completed_date": "",
+      "asset_destination": "Conference Room",
+      "information": "Waiting for repair request to be approved"
+    }
+  ]
+}

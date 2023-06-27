@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "company_name": "ABC Company",
+      "company_phone": "123456789",
+      "company_email": "abc@example.com",
+      "company_fax": "987654321",
+      "company_address": "123 Main Street, City",
+      "person_in_charge": "John Doe",
+      "pic_contact_number": "555-1234",
+      "pic_email": "john.doe@example.com",
+      "note": "Lorem ipsum dolor sit amet",
+      "status": "active"
+    },
+    {
+      "id": 2,
+      "company_name": "XYZ Corporation",
+      "company_phone": "987654321",
+      "company_email": "xyz@example.com",
+      "company_fax": "123456789",
+      "company_address": "456 Elm Street, City",
+      "person_in_charge": "Jane Smith",
+      "pic_contact_number": "555-5678",
+      "pic_email": "jane.smith@example.com",
+      "note": "Lorem ipsum dolor sit amet",
+      "status": "active"
+    },
+    {
+      "id": 3,
+      "company_name": "PQR Ltd.",
+      "company_phone": "555555555",
+      "company_email": "pqr@example.com",
+      "company_fax": "666666666",
+      "company_address": "789 Oak Street, City",
+      "person_in_charge": "David Johnson",
+      "pic_contact_number": "555-9876",
+      "pic_email": "david.johnson@example.com",
+      "note": "Lorem ipsum dolor sit amet",
+      "status": "inactive"
+    },
+    {
+      "id": 4,
+      "company_name": "MNO Industries",
+      "company_phone": "222222222",
+      "company_email": "mno@example.com",
+      "company_fax": "333333333",
+      "company_address": "987 Pine Street, City",
+      "person_in_charge": "Amy Lee",
+      "pic_contact_number": "555-4321",
+      "pic_email": "amy.lee@example.com",
+      "note": "Lorem ipsum dolor sit amet",
+      "status": "inactive"
+    },
+    {
+      "id": 5,
+      "company_name": "RST Corporation",
+      "company_phone": "444444444",
+      "company_email": "rst@example.com",
+      "company_fax": "555555555",
+      "company_address": "654 Maple Street, City",
+      "person_in_charge": "Mark Davis",
+      "pic_contact_number": "555-8765",
+      "pic_email": "mark.davis@example.com",
+      "note": "Lorem ipsum dolor sit amet",
+      "status": "active"
+    }
+  ]
+}

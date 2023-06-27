@@ -1,0 +1,46 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "asset_name": "Desktop Computer",
+      "sub_asset_name": "Monitor",
+      "sub_sub_asset_name": "Dell 24-inch Monitor",
+      "tag": "IT001"
+    },
+    {
+      "id": 2,
+      "asset_name": "Laptop",
+      "sub_asset_name": "",
+      "sub_sub_asset_name": "",
+      "tag": "IT002"
+    },
+    {
+      "id": 3,
+      "asset_name": "Printer",
+      "sub_asset_name": "Scanner",
+      "sub_sub_asset_name": "",
+      "tag": "OF001"
+    },
+    {
+      "id": 4,
+      "asset_name": "Conference Room Table",
+      "sub_asset_name": "Chairs",
+      "sub_sub_asset_name": "Office Chairs",
+      "tag": "OF002"
+    },
+    {
+      "id": 5,
+      "asset_name": "Server",
+      "sub_asset_name": "",
+      "sub_sub_asset_name": "",
+      "tag": "IT003"
+    },
+    {
+      "id": 6,
+      "asset_name": "Projector",
+      "sub_asset_name": "",
+      "sub_sub_asset_name": "",
+      "tag": "OF003"
+    }
+  ]
+}

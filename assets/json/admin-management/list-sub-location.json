@@ -1,0 +1,105 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "sub_location_name": "Storage Room A",
+      "sub_sub_locations": [
+        {
+          "id": 1,
+          "sub_sub_location_name": "Shelf 1"
+        },
+        {
+          "id": 2,
+          "sub_sub_location_name": "Shelf 2"
+        },
+        {
+          "id": 3,
+          "sub_sub_location_name": "Cabinet 1"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "sub_location_name": "Server Room B",
+      "sub_sub_locations": [
+        {
+          "id": 1,
+          "sub_sub_location_name": "Rack 1"
+        },
+        {
+          "id": 2,
+          "sub_sub_location_name": "Rack 2"
+        },
+        {
+          "id": 3,
+          "sub_sub_location_name": "Cabinet 1"
+        },
+        {
+          "id": 4,
+          "sub_sub_location_name": "Cabinet 2"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "sub_location_name": "Warehouse C",
+      "sub_sub_locations": [
+        {
+          "id": 1,
+          "sub_sub_location_name": "Section A"
+        },
+        {
+          "id": 2,
+          "sub_sub_location_name": "Section B"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "sub_location_name": "Office Room 101",
+      "sub_sub_locations": []
+    },
+    {
+      "id": 5,
+      "sub_location_name": "Storage Room B",
+      "sub_sub_locations": [
+        {
+          "id": 1,
+          "sub_sub_location_name": "Shelf 1"
+        },
+        {
+          "id": 2,
+          "sub_sub_location_name": "Shelf 2"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "sub_location_name": "Warehouse D",
+      "sub_sub_locations": [
+        {
+          "id": 1,
+          "sub_sub_location_name": "Section A"
+        },
+        {
+          "id": 2,
+          "sub_sub_location_name": "Section B"
+        },
+        {
+          "id": 3,
+          "sub_sub_location_name": "Section C"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "sub_location_name": "Server Room C",
+      "sub_sub_locations": [
+        {
+          "id": 1,
+          "sub_sub_location_name": "Rack 1"
+        }
+      ]
+    }
+  ]
+}

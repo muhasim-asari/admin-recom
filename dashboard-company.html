@@ -86,7 +86,7 @@
         <ul class='menu-inner py-1'>
           <!-- Dashboards -->
           <li class='menu-item active'>
-            <a href='./dashboard.html' class='menu-link'>
+            <a href='./dashboard-company.html' class='menu-link'>
               <i class='menu-icon tf-icons mdi mdi-home-outline'></i>
               <div data-i18n='Dashboards'>Dashboards</div>
             </a>
@@ -96,17 +96,17 @@
             <span class='menu-header-text'>Master Data</span>
           </li>
           <li class='menu-item'>
-            <a href='./super-admin-master-data-group.html' class='menu-link'>
+            <a href='./admin-company-master-data-branch.html' class='menu-link'>
               <i
-                class='menu-icon tf-icons mdi mdi-account-group-outline'
+                class='menu-icon tf-icons mdi mdi-office-building-outline'
               ></i>
-              <div data-i18n='Group'>Group</div>
+              <div data-i18n='Branch'>Branch</div>
             </a>
           </li>
           <li class='menu-item'>
-            <a href='./super-admin-master-data-company.html' class='menu-link'>
-              <i class='menu-icon tf-icons mdi mdi-office-building-outline'></i>
-              <div data-i18n='Company'>Company</div>
+            <a href='./admin-company-master-data-currency.html' class='menu-link'>
+              <i class='menu-icon tf-icons mdi mdi-cash-multiple'></i>
+              <div data-i18n='Currency'>Currency</div>
             </a>
           </li>
         </ul>
@@ -139,7 +139,7 @@
                   <li>
                     <a
                       class='dropdown-item'
-                      href='pages-account-settings-account.html'
+                      href='#'
                     >
                       <div class='d-flex'>
                         <div class='flex-shrink-0 me-3'>
@@ -174,34 +174,7 @@
                 </ul>
               </li>
               <!--/ User -->
-
-
-
             </ul>
-          </div>
-
-
-          <!-- Search Small Screens -->
-          <div class='navbar-search-wrapper search-input-wrapper d-none'>
-            <span class='twitter-typeahead' style='position: relative; display: inline-block;'><input type='text'
-                class='form-control search-input container-xxl border-0 tt-input' placeholder='Search...'
-                aria-label='Search...' autocomplete='off' spellcheck='false' dir='auto'
-                style='position: relative; vertical-align: top;'>
-              <pre aria-hidden='true'
-                style='position: absolute; visibility: hidden; white-space: pre; font-family: Inter, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Oxygen, Ubuntu, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif; font-size: 15px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;'></pre>
-              <div class='tt-menu navbar-search-suggestion ps'
-                style='position: absolute; top: 100%; left: 0px; z-index: 100; display: none;'>
-                <div class='tt-dataset tt-dataset-pages'></div>
-                <div class='tt-dataset tt-dataset-files'></div>
-                <div class='tt-dataset tt-dataset-members'></div>
-                <div class='ps__rail-x' style='left: 0px; bottom: 0px;'>
-                  <div class='ps__thumb-x' tabindex='0' style='left: 0px; width: 0px;'></div>
-                </div>
-                <div class='ps__rail-y' style='top: 0px; right: 0px;'>
-                  <div class='ps__thumb-y' tabindex='0' style='top: 0px; height: 0px;'></div>
-                </div>
-              </div></span>
-            <i class='mdi mdi-close search-toggler cursor-pointer'></i>
           </div>
         </nav>
 
@@ -213,6 +186,56 @@
 
           <div class='container-xxl flex-grow-1 container-p-y'>
             <div class='row gy-4'>
+
+              <div class="col-lg-3 col-sm-6">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex align-items-center flex-wrap gap-2">
+                      <div class="avatar me-3">
+                        <a href="./admin-company-master-data-branch.html">
+                          <div class="avatar-initial bg-label-primary rounded">
+                            <i class="mdi mdi-office-building-outline mdi-24px">
+                            </i>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="card-info">
+                        <div class="d-flex align-items-center">
+                          <h4 class="mb-0">8</h4>
+                          <i class="mdi mdi-chevron-up text-success mdi-24px"></i>
+                          <small class="text-success">3</small>
+                        </div>
+                        <small class="text-muted">Total Branch</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-sm-6">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex align-items-center flex-wrap gap-2">
+                      <div class="avatar me-3">
+                        <a href="./admin-company-master-data-currency.html">
+                          <div class="avatar-initial bg-label-success rounded">
+                            <i class="mdi mdi-cash-multiple mdi-24px">
+                            </i>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="card-info">
+                        <div class="d-flex align-items-center">
+                          <h4 class="mb-0">28</h4>
+                          <i class="mdi mdi-chevron-up text-success mdi-24px"></i>
+                          <small class="text-success">3</small>
+                        </div>
+                        <small class="text-muted">Total Currency</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
               <div class='col-md-12 col-lg-12'>
                 <div class='card'>

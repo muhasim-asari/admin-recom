@@ -1,0 +1,56 @@
+{
+  "data": [
+    {
+      "asset_code": "AS-001",
+      "asset_name": "Laptop",
+      "maintenance_group": "IT Department",
+      "status": "Completed",
+      "asset_maintenance_group": "Hardware",
+      "asset_information": "High-end laptop model with Intel Core i7 processor",
+      "location_information": "Room 301, IT Department",
+      "person_in_charge_asset": "John Doe",
+      "maintenance_information": "Performed routine maintenance and software updates",
+      "maintenance_date": "15-June-2023",
+      "asset_maintenance_created_date": "10-June-2023"
+    },
+    {
+      "asset_code": "AS-002",
+      "asset_name": "Printer",
+      "maintenance_group": "Office Supplies Department",
+      "status": "Waiting Approval",
+      "asset_maintenance_group": "Hardware",
+      "asset_information": "Color inkjet printer with wireless connectivity",
+      "location_information": "Room 102, Office Supplies Storage",
+      "person_in_charge_asset": "Jane Smith",
+      "maintenance_information": "Scheduled maintenance pending approval",
+      "maintenance_date": "",
+      "asset_maintenance_created_date": "12-June-2023"
+    },
+    {
+      "asset_code": "AS-003",
+      "asset_name": "Projector",
+      "maintenance_group": "Audio Visual Department",
+      "status": "Waiting Approval",
+      "asset_maintenance_group": "Hardware",
+      "asset_information": "Full HD projector with HDMI and VGA inputs",
+      "location_information": "Conference Room A",
+      "person_in_charge_asset": "David Johnson",
+      "maintenance_information": "Scheduled maintenance pending approval",
+      "maintenance_date": "",
+      "asset_maintenance_created_date": "14-June-2023"
+    },
+    {
+      "asset_code": "AS-004",
+      "asset_name": "Air Conditioner",
+      "maintenance_group": "Facilities Department",
+      "status": "Completed",
+      "asset_maintenance_group": "Equipment",
+      "asset_information": "Split-type air conditioner for large rooms",
+      "location_information": "Main Building, 2nd Floor",
+      "person_in_charge_asset": "Amy Lee",
+      "maintenance_information": "Performed cleaning and filter replacement",
+      "maintenance_date": "10-June-2023",
+      "asset_maintenance_created_date": "8-June-2023"
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 "use strict";
 let config = {
     colors: {
-      primary: "#666cff",
-      secondary: "#6d788d",
+      primary: "#ff8e2b",
+      secondary: "#0d2137",
       success: "#72e128",
       info: "#26c6f9",
       warning: "#fdb528",
@@ -18,8 +18,8 @@ let config = {
       borderColor: "#eaeaec",
     },
     colors_label: {
-      primary: "#666cff29",
-      secondary: "#6d788d29",
+      primary: "#ff8e2b",
+      secondary: "#0d2137",
       success: "#72e12829",
       info: "#26c6f929",
       warning: "#fdb52829",

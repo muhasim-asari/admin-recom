@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "asset_code": "11-56-43-56-43-33",
+      "asset_name": "Komputer",
+      "asset_category": "IT Hardware & Software",
+      "asset_group": "Hardware",
+      "status_approval_asset_moving": "Waiting Approval",
+      "status_moving_asset": "Waiting Approval"
+    },
+    {
+      "id": 2,
+      "asset_code": "11-34-45-23-12-21",
+      "asset_name": "Laptop",
+      "asset_category": "IT Hardware & Software",
+      "asset_group": "Hardware",
+      "status_approval_asset_moving": "Waiting Approval",
+      "status_moving_asset": "Waiting Approval"
+    }
+  ]
+}

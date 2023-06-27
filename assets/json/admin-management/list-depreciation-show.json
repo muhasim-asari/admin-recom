@@ -1,0 +1,72 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "period": "January 2023",
+      "acquisition_cost": {
+        "originated_currency": 25000000,
+        "base_currency": 1800
+      },
+      "depreciation_value": {
+        "originated_currency": 5000000,
+        "base_currency": 360
+      },
+      "net_book_value": {
+        "originated_currency": 20000000,
+        "base_currency": 1440
+      },
+      "information": "This is the information for the first data."
+    },
+    {
+      "id": 2,
+      "period": "April 2023",
+      "acquisition_cost": {
+        "originated_currency": 0,
+        "base_currency": 0
+      },
+      "depreciation_value": {
+        "originated_currency": 8000000,
+        "base_currency": 570
+      },
+      "net_book_value": {
+        "originated_currency": 27000000,
+        "base_currency": 1920
+      },
+      "information": "This is the information for the second data."
+    },
+    {
+      "id": 3,
+      "period": "July 2023",
+      "acquisition_cost": {
+        "originated_currency": 45000000,
+        "base_currency": 3200
+      },
+      "depreciation_value": {
+        "originated_currency": 12000000,
+        "base_currency": 860
+      },
+      "net_book_value": {
+        "originated_currency": 33000000,
+        "base_currency": 2360
+      },
+      "information": "This is the information for the third data."
+    },
+    {
+      "id": 4,
+      "period": "October 2023",
+      "acquisition_cost": {
+        "originated_currency": 0,
+        "base_currency": 0
+      },
+      "depreciation_value": {
+        "originated_currency": 6000000,
+        "base_currency": 420
+      },
+      "net_book_value": {
+        "originated_currency": 24000000,
+        "base_currency": 1680
+      },
+      "information": "This is the information for the fourth data."
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "location_name": "Warehouse A",
+      "description": "Main warehouse for storing finished goods",
+      "status": "active",
+      "sub_locations": [
+        {
+          "id": 1,
+          "sub_location_name": "Storage Room A",
+          "sub_sub_locations": [
+            {
+              "id": 1,
+              "sub_sub_location_name": "Shelf 1"
+            },
+            {
+              "id": 2,
+              "sub_sub_location_name": "Shelf 2"
+            },
+            {
+              "id": 3,
+              "sub_sub_location_name": "Cabinet 1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "location_name": "Storage Room",
+      "description": "Small room for storing office supplies",
+      "status": "active",
+      "sub_locations": [
+        {
+          "id": 1,
+          "sub_location_name": "Storage Room A",
+          "sub_sub_locations": [
+            {
+              "id": 1,
+              "sub_sub_location_name": "Shelf 1"
+            },
+            {
+              "id": 2,
+              "sub_sub_location_name": "Shelf 2"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "sub_location_name": "Storage Room B",
+          "sub_sub_locations": [
+            {
+              "id": 1,
+              "sub_sub_location_name": "Shelf 1"
+            },
+            {
+              "id": 2,
+              "sub_sub_location_name": "Shelf 2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "location_name": "Server Room",
+      "description": "Secured room for housing servers and network equipment",
+      "status": "active",
+      "sub_locations": [
+        {
+          "id": 2,
+          "sub_location_name": "Server Room B",
+          "sub_sub_locations": [
+            {
+              "id": 1,
+              "sub_sub_location_name": "Rack 1"
+            },
+            {
+              "id": 2,
+              "sub_sub_location_name": "Rack 2"
+            },
+            {
+              "id": 3,
+              "sub_sub_location_name": "Cabinet 1"
+            },
+            {
+              "id": 4,
+              "sub_sub_location_name": "Cabinet 2"
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "sub_location_name": "Server Room C",
+          "sub_sub_locations": [
+            {
+              "id": 1,
+              "sub_sub_location_name": "Rack 1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "location_name": "Office Room 101",
+      "description": "First-floor office room for department A",
+      "status": "inactive",
+      "sub_locations": []
+    },
+    {
+      "id": 5,
+      "location_name": "Warehouse C",
+      "description": "",
+      "status": "",
+      "sub_locations": [
+        {
+          "id": 3,
+          "sub_location_name": "Warehouse C",
+          "sub_sub_locations": [
+            {
+              "id": 1,
+              "sub_sub_location_name": "Section A"
+            },
+            {
+              "id": 2,
+              "sub_sub_location_name": "Section B"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "location_name": "Warehouse D",
+      "description": "",
+      "status": "",
+      "sub_locations": [
+        {
+          "id": 6,
+          "sub_location_name": "Warehouse D",
+          "sub_sub_locations": [
+            {
+              "id": 1,
+              "sub_sub_location_name": "Section A"
+            },
+            {
+              "id": 2,
+              "sub_sub_location_name": "Section B"
+            },
+            {
+              "id": 3,
+              "sub_sub_location_name": "Section C"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

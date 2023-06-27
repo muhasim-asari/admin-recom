@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "asset_code": "11-22-33-44-55",
+      "asset_name": "Printer",
+      "asset_category": "IT Hardware & Software",
+      "asset_group": "Hardware",
+      "status_approval_asset_moving": "Completed",
+      "status_moving_asset": "Completed"
+    },
+    {
+      "id": 2,
+      "asset_code": "11-34-45-23-12-21",
+      "asset_name": "Laptop",
+      "asset_category": "IT Hardware & Software",
+      "asset_group": "Hardware",
+      "status_approval_asset_moving": "Waiting Approval",
+      "status_moving_asset": "Waiting Approval"
+    },
+    {
+      "id": 3,
+      "asset_code": "22-33-44-55-66",
+      "asset_name": "Monitor",
+      "asset_category": "IT Hardware & Software",
+      "asset_group": "Hardware",
+      "status_approval_asset_moving": "Waiting Approval",
+      "status_moving_asset": "Waiting Approval"
+    },
+    {
+      "id": 4,
+      "asset_code": "33-44-55-66-77",
+      "asset_name": "Keyboard",
+      "asset_category": "IT Hardware & Software",
+      "asset_group": "Hardware",
+      "status_approval_asset_moving": "Completed",
+      "status_moving_asset": "Completed"
+    }
+  ]
+}

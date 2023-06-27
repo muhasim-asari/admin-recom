@@ -1,0 +1,94 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "asset_in_created_date": "12-June-2023",
+      "asset_in_approval_date": "14-June-2023",
+      "transaction_number": "TRN-001",
+      "status": "Complete",
+      "person_in_charge": {
+        "department": "IT Department",
+        "name": "John Doe"
+      },
+      "asset_in_date": "16-June-2023",
+      "asset_in_completed_date": "17-June-2023",
+      "asset_destination": "Storage Room",
+      "information": "Asset in process completed"
+    },
+    {
+      "id": 2,
+      "asset_in_created_date": "13-June-2023",
+      "asset_in_approval_date": "15-June-2023",
+      "transaction_number": "TRN-002",
+      "status": "Disapprove",
+      "person_in_charge": {
+        "department": "Finance Department",
+        "name": "Jane Smith"
+      },
+      "asset_in_date": "17-June-2023",
+      "asset_in_completed_date": "",
+      "asset_destination": "Warehouse",
+      "information": "Asset in request disapproved"
+    },
+    {
+      "id": 3,
+      "asset_in_created_date": "14-June-2023",
+      "asset_in_approval_date": "16-June-2023",
+      "transaction_number": "TRN-003",
+      "status": "Waiting Approval",
+      "person_in_charge": {
+        "department": "HR Department",
+        "name": "David Johnson"
+      },
+      "asset_in_date": "",
+      "asset_in_completed_date": "",
+      "asset_destination": "",
+      "information": "Asset in request awaiting approval"
+    },
+    {
+      "id": 4,
+      "asset_in_created_date": "15-June-2023",
+      "asset_in_approval_date": "17-June-2023",
+      "transaction_number": "TRN-004",
+      "status": "Asset In",
+      "person_in_charge": {
+        "department": "Operations Department",
+        "name": "Amy Lee"
+      },
+      "asset_in_date": "19-June-2023",
+      "asset_in_completed_date": "",
+      "asset_destination": "Server Room",
+      "information": "Asset in process ongoing"
+    },
+    {
+      "id": 5,
+      "asset_in_created_date": "16-June-2023",
+      "asset_in_approval_date": "18-June-2023",
+      "transaction_number": "TRN-005",
+      "status": "Waiting Asset In",
+      "person_in_charge": {
+        "department": "Marketing Department",
+        "name": "Mark Davis"
+      },
+      "asset_in_date": "",
+      "asset_in_completed_date": "",
+      "asset_destination": "Office Room",
+      "information": "Asset in request pending"
+    },
+    {
+      "id": 6,
+      "asset_in_created_date": "17-June-2023",
+      "asset_in_approval_date": "",
+      "transaction_number": "TRN-006",
+      "status": "Waiting Approval",
+      "person_in_charge": {
+        "department": "Sales Department",
+        "name": "Emily Wilson"
+      },
+      "asset_in_date": "",
+      "asset_in_completed_date": "",
+      "asset_destination": "Conference Room",
+      "information": "Asset in request awaiting approval"
+    }
+  ]
+}

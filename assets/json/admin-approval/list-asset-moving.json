@@ -1,0 +1,109 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "asset_moving_created_date": "19-Jun-2023",
+      "asset_moving_approval_date": "Waiting Approval",
+      "asset_moving_completed_date": "Waiting Approval",
+      "moving_type": "By Asset Group",
+      "person_in_charge": {
+        "name": "Hotel Name",
+        "department": "Department Name"
+      },
+      "asset_moving_destination": "Hotel Name 2",
+      "status": "Complete",
+      "information": "Pemindahan asset hardware",
+      "transaction_number": "TRN-001"
+    },
+    {
+      "id": 2,
+      "asset_moving_created_date": "20-Jun-2023",
+      "asset_moving_approval_date": "Process",
+      "asset_moving_completed_date": "Waiting Approval",
+      "moving_type": "By Asset Item",
+      "person_in_charge": {
+        "name": "Hotel Name 2",
+        "department": "Department Name 2"
+      },
+      "asset_moving_destination": "Hotel Name 1",
+      "status": "Disapprove",
+      "information": "Pemindahan asset software",
+      "transaction_number": "TRN-002"
+    },
+    {
+      "id": 3,
+      "asset_moving_created_date": "21-Jun-2023",
+      "asset_moving_approval_date": "Completed",
+      "asset_moving_completed_date": "22-Jun-2023",
+      "moving_type": "All",
+      "person_in_charge": {
+        "name": "Hotel Name 3",
+        "department": "Department Name 3"
+      },
+      "asset_moving_destination": "Hotel Name 2",
+      "status": "Waiting Moving",
+      "information": "Pemindahan asset hardware",
+      "transaction_number": "TRN-003"
+    },
+    {
+      "id": 4,
+      "asset_moving_created_date": "22-Jun-2023",
+      "asset_moving_approval_date": "Completed",
+      "asset_moving_completed_date": "23-Jun-2023",
+      "moving_type": "By Asset Category",
+      "person_in_charge": {
+        "name": "Hotel Name 4",
+        "department": "Department Name 4"
+      },
+      "asset_moving_destination": "Hotel Name 3",
+      "status": "Waiting Approval",
+      "information": "Pemindahan asset furniture",
+      "transaction_number": "TRN-004"
+    },
+    {
+      "id": 5,
+      "asset_moving_created_date": "23-Jun-2023",
+      "asset_moving_approval_date": "Waiting Approval",
+      "asset_moving_completed_date": "Waiting Approval",
+      "moving_type": "By Asset Item",
+      "person_in_charge": {
+        "name": "Hotel Name 1",
+        "department": "Department Name 1"
+      },
+      "asset_moving_destination": "Hotel Name 4",
+      "status": "Complete",
+      "information": "Pemindahan asset software",
+      "transaction_number": "TRN-005"
+    },
+    {
+      "id": 6,
+      "asset_moving_created_date": "24-Jun-2023",
+      "asset_moving_approval_date": "Process",
+      "asset_moving_completed_date": "Waiting Approval",
+      "moving_type": "By Asset Group",
+      "person_in_charge": {
+        "name": "Hotel Name 3",
+        "department": "Department Name 3"
+      },
+      "asset_moving_destination": "Hotel Name 2",
+      "status": "Waiting Moving",
+      "information": "Pemindahan asset hardware",
+      "transaction_number": "TRN-006"
+    },
+    {
+      "id": 7,
+      "asset_moving_created_date": "25-Jun-2023",
+      "asset_moving_approval_date": "Waiting Approval",
+      "asset_moving_completed_date": "Waiting Approval",
+      "moving_type": "All",
+      "person_in_charge": {
+        "name": "Hotel Name 2",
+        "department": "Department Name 2"
+      },
+      "asset_moving_destination": "Hotel Name 1",
+      "status": "Disapprove",
+      "information": "Pemindahan asset software",
+      "transaction_number": "TRN-007"
+    }
+  ]
+}

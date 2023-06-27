@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "asset_name": "Laptop",
+      "quantity": 10,
+      "asset_origin": ["Company A", "Company B", "Company C"]
+    },
+    {
+      "asset_name": "Printer",
+      "quantity": 5,
+      "asset_origin": ["Company D", "Company E", "Company F"]
+    },
+    {
+      "asset_name": "Monitor",
+      "quantity": 8,
+      "asset_origin": ["Company G", "Company H", "Company I"]
+    }
+  ]
+}
