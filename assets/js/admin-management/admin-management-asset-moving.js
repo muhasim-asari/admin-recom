@@ -3,7 +3,7 @@
 $(function () {
   let t, a, n;
   var e;
-  var s = $(".datatables-asset-audit");
+  var s = $(".datatables-asset-moving");
   var i = $(".select2");
 
   if (i.length) {
@@ -12,12 +12,11 @@ $(function () {
 
   if (s.length) {
     e = s.DataTable({
-      ajax: assetsPath + "json/admin-approval/list-asset-audit.json",
+      ajax: assetsPath + "json/admin-approval/list-asset-moving.json",
       columns: [
-        { data: "begin_audit_date" },
-        { data: "done_audit_date" },
+        { data: "asset_moving_created_date" },
         { data: "transaction_number" },
-        { data: "audit_type" },
+        { data: "moving_type" },
         { data: "person_in_charge" },
         { data: "action" },
       ],
@@ -26,29 +25,34 @@ $(function () {
       columnDefs: [
         {
           responsivePriority: 2,
-          targets: 2,
+          targets: 1,
           render: function (data, type, row, meta) {
             var getStatusIcon = function (status) {
               switch (status) {
-                case "Completed":
+                case "Complete":
                   return '<i class="mdi mdi-check-circle mdi-20px text-success me-1"></i>';
-                case "Process":
-                  return '<i class="mdi mdi-clock-time-five mdi-20px text-danger me-1"></i>';
                 case "Waiting Approval":
-                  return '<i class="mdi mdi-alert mdi-20px text-warning me-1"></i>';
+                  return '<i class="mdi mdi-alert mdi-20px text-danger me-1"></i>';
+                case "Waiting Moving":
+                  return '<i class="mdi mdi-information mdi-20px text-warning me-1"></i>';
+                case "Disapprove":
+                  return '<i class="mdi mdi-close-circle mdi-20px text-secondary me-1"></i>';
                 default:
                   return "";
               }
+              
             };
 
             var getStatusColorClass = function (status) {
               switch (status) {
-                case "Completed":
+                case "Complete":
                   return "text-success";
-                case "Process":
-                  return "text-danger";
                 case "Waiting Approval":
+                  return "text-danger";
+                case "Waiting Moving":
                   return "text-warning";
+                case "Disapprove":
+                  return "text-secondary";
                 default:
                   return "";
               }
@@ -56,7 +60,7 @@ $(function () {
 
             return (
               "<div>" +
-              "<a href='./admin-management-asset-audit-detail.html'>" +
+              "<a href='./admin-approval-asset-moving-detail.html'>" +
               row.transaction_number +
               "</a>" +
               "<br/>" +
@@ -71,13 +75,13 @@ $(function () {
           },
         },
         {
-          targets: 4,
+          targets: 3,
           render: function (data, type, row, meta) {
             return (
               '<div class="text-heading">' +
-              row.position +
+              row.person_in_charge.name +
               "<br/>" +
-              row.person_in_charge +
+              row.person_in_charge.department +
               "</div>"
             );
           },
@@ -114,7 +118,7 @@ $(function () {
               text: '<i class="mdi mdi-file-pdf-box me-1"></i>Pdf',
               className: "dropdown-item",
               exportOptions: {
-                columns: [1, 2, 3, 4, 5],
+                columns: [1, 2, 3, 4],
                 format: {
                   body: function (data, row, column, node) {
                     var parsedData;
@@ -144,7 +148,7 @@ $(function () {
               text: '<i class="mdi mdi-file-excel-outline me-1"></i>Excel',
               className: "dropdown-item",
               exportOptions: {
-                columns: [1, 2, 3, 4, 5],
+                columns: [1, 2, 3, 4],
                 format: {
                   body: function (data, row, column, node) {
                     var parsedData;
@@ -171,6 +175,13 @@ $(function () {
             },
           ],
         },
+        {
+          text: '<i class="mdi mdi-plus me-0 me-sm-1"></i><span class="d-none d-sm-inline-block">Add Asset Moving</span>',
+          className: "add-new btn btn-primary mx-3",
+          action: function () {
+            window.location.href = "./admin-management-asset-moving-data-add.html";
+          },
+        },
       ],
       initComplete: function () {
         var statusSelect = $(
@@ -184,7 +195,7 @@ $(function () {
       },
     });
 
-    $(".datatables-asset-audit tbody").on(
+    $(".datatables-asset-moving tbody").on(
       "click",
       ".delete-record",
       function () {
@@ -193,3 +204,21 @@ $(function () {
     );
   }
 });
+
+const movingTypeSelect = document.getElementById('movingType');
+const selectAssetGroup = document.getElementById('selectAssetGroup');
+
+movingTypeSelect.addEventListener('change', function () {
+  const selectedValue = this.value;
+
+  if (
+    selectedValue === 'By Asset Group' ||
+    selectedValue === 'By Asset Location' ||
+    selectedValue === 'By Asset Item'
+  ) {
+    selectAssetGroup.style.display = 'block';
+  } else {
+    selectAssetGroup.style.display = 'none';
+  }
+});
+

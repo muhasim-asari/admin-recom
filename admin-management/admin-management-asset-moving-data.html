@@ -15,7 +15,7 @@
       content='width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0'
     />
 
-    <title>Asset Audit - Admin Recom</title>
+    <title>Asset Moving Data - Admin Recom</title>
 
     <meta
       name='description'
@@ -608,114 +608,29 @@
             <div class='container-xxl flex-grow-1 container-p-y'>
               <div class='card'>
                 <div class="card-header">
-                  <div class="row align-items-center">
-                    <div class="col-md-6">
-                      <h5 class="card-title mb-0">Detail Job Order Audit</h5>
-                    </div>
-                    <div class="col-md-6 text-end">
-                      <button type="button" class="btn btn-label-success waves-effect me-2" data-bs-toggle="modal" data-bs-target="#doneProcess">
-                        <span class="tf-icons mdi mdi-check-bold me-1"></span>Done Process
-                      </button>
-                      <button type="button" class="btn btn-primary waves-effect waves-light">
-                        <span class="tf-icons mdi mdi-printer-outline me-1"></span>Print PDF
-                      </button>
+                  <h5 class="card-title">Filter</h5>
+                  <div
+                    class="d-flex justify-content-between align-items-center row gap-3 gap-md-0"
+                  >
+                    <div class="col-md-4">
+                      <select id="status" class="form-select text-capitalize">
+                        <option value="">All Status</option>
+                        <option value="waiting_approval">Waiting Approval</option>
+                        <option value="waiting_moving">Waiting Moving</option>
+                        <option value="disapprove">Disapprove</option>
+                        <option value="complete">Complete</option>
+                      </select>
                     </div>
                   </div>
                 </div>
                 <div class='card-datatable table-responsive'>
-                  <div class="btn btn-label-primary waves-effect rounded-0 w-100 text-dark">Detail Information</div>
-                  <table class='datatables-asset-audit-detail table'>
+                  <table class='datatables-asset-moving table'>
                     <thead class='table-light'>
                       <tr>
-                        <th>Begin Audit Date</th>
-                        <th>Done Audit Date</th>
+                        <th>Asset Moving Created Date</th>
                         <th>Transaction Number</th>
-                        <th>Audit Type</th>
-                      </tr>
-                    </thead>
-                  </table>
-                </div>
-
-                <!-- Card -->
-                <div class="row p-3 pb-5 g-4">
-                  <div class="col-md-6 col-lg-3">
-                    <div class="card mb-3 h-100">
-                      <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Audit Information</h5>
-                        <p class="card-text">ini Audit Keseluruhan</p>
-                      </div>
-                    </div>
-                  </div>
-                
-                  <div class="col-md-6 col-lg-3">
-                    <div class="card mb-3 h-100">
-                      <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Person In Charge</h5>
-                        <div class="card-subtitle text-muted mb-3">Yogyakarta Heritage Hotel</div>
-                        <ol class="card-text list-group list-group-numbered">
-                          <li class="list-group-item border-0 px-0 py-1">Senior Auditor</li>
-                          <li class="list-group-item border-0 px-0 py-1">Auditor</li>
-                        </ol>
-                      </div>
-                    </div>
-                  </div>
-                
-                  <div class="col-md-6 col-lg-3">
-                    <div class="card mb-3 h-100">
-                      <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Status</h5>
-                        <p class="card-text">
-                          <span class="text-warning"><i class="mdi mdi-alert mdi-20px text-warning me-1"></i>Waiting Approval</span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                
-                  <div class="col-md-6 col-lg-3">
-                    <div class="card mb-3 h-100">
-                      <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Asset Match</h5>
-                        <p id="wrapperInfoAssetMatch" class="card-text">
-                          3 <a href="javascript:void(0)"><span id="editAssetMatch" class="text-info ms-1"><i class="mdi mdi-pencil mdi-20px me-1"></i></span></a>
-                        </p>
-                        <form id="wrapperInputAssetMatch" class="card-text" style="display: none;">
-                          <div class="row g-4 align-items-center">
-                            <div class="col-9">
-                              <input type="text" class="form-control" id="inputAssetMatch" placeholder="3" aria-describedby="inputAssetMatch"> 
-                            </div>
-                            <div class="col">
-                              <a href="javascript:void(0)"><span id="seeAssetMatch" class="text-success ms-1"><i class="mdi mdi-check-bold mdi-20px me-1"></i></span></a>
-                            </div>
-                          </div>
-                        </form>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                <!-- /Card -->
-
-                <div class='card-datatable table-responsive'>
-                  <div class="btn btn-label-success waves-effect rounded-0 w-100 text-dark">Audit Information</div>
-                  <div class="d-flex align-items-center">
-                    <div class="col-md-6 ps-5">
-                      <p class="mb-2 mt-3">Location : <span class="fw-bold">Gedung A</span></p>
-                      <p >Sub Location : <span class="fw-bold">Lantai 2</span></p>
-                    </div>
-                    <div class="col-md-6 text-end">
-                      <button class="btn btn btn-label-primary demo waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#verifyAllData"><span class="tf-icons mdi mdi mdi-tray-arrow-down me-1"></span>Download File Scan Barcode</button>
-                    </div>
-                  </div>
-                  <table class='datatables-detail-information table'>
-                    <thead class='table-light'>
-                      <tr>
-                        <th>Asset Code</th>
-                        <th>Asset Name</th>
-                        <th>Total Tags</th>
-                        <th>Missing Tags</th>
-                        <th>Missing Asset</th>
-                        <th>Asset Dislocation</th>
-                        <th>Asset Out</th>
+                        <th>Moving Type</th>
+                        <th>Person In Charge</th>
                         <th>Action</th>
                       </tr>
                     </thead>
@@ -725,87 +640,6 @@
               </div>
             </div>
             <!-- / Content -->
-
-            <!-- Done Audit Process -->
-            <div class="modal fade" id="doneProcess" tabindex="-1" aria-labelledby="approveDetailInformationLabel" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="approveDetailInformationLabel">Confirmation</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <p>Are you sure this job order audit process has been done?</p>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-                    <button type="button" class="btn btn-success">Yes, I'm Sure</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Verify Data -->
-            <div class="modal fade" id="editDiscrepancy" tabindex="-1" aria-labelledby="editDiscrepancyContent" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="editDiscrepancyContent">Discrepancy</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="row g-4">
-                      <div class="col-md-12">
-                        <div class="form-floating form-floating-outline">
-                          <input type="text" id="assetCode" class="form-control" placeholder="11-22-33-44-55-66" value="11-22-33-44-55-66" disabled>
-                          <label for="assetCode">Asset Code</label>
-                        </div>
-                      </div>
-                      <div class="col-md-12">
-                        <div class="form-floating form-floating-outline">
-                          <input type="text" id="assetName" class="form-control" placeholder="Furniture" value="Furniture" disabled>
-                          <label for="assetName">Asset Name</label>
-                        </div>
-                      </div>
-                      <div class="col-md-12">
-                        <div class="form-floating form-floating-outline">
-                          <input type="text" id="totalTags" class="form-control" placeholder="12" value="12" disabled>
-                          <label for="totalTags">Total Tags</label>
-                        </div>
-                      </div>
-                      <div class="col-md-12">
-                        <div class="form-floating form-floating-outline">
-                          <input type="text" id="missingTags" class="form-control" placeholder="12" value="2">
-                          <label for="missingTags">Missing tags</label>
-                        </div>
-                      </div>
-                      <div class="col-md-12">
-                        <div class="form-floating form-floating-outline">
-                          <input type="text" id="missingAsset" class="form-control" placeholder="12" value="0">
-                          <label for="missingAsset">Missing Asset</label>
-                        </div>
-                      </div>
-                      <div class="col-md-12">
-                        <div class="form-floating form-floating-outline">
-                          <input type="text" id="dislocation" class="form-control" placeholder="12" value="0">
-                          <label for="dislocation">Dislocation</label>
-                        </div>
-                      </div>
-                      <div class="col-md-12">
-                        <div class="form-floating form-floating-outline">
-                          <input type="text" id="assetOut" class="form-control" placeholder="12" value="0">
-                          <label for="assetOut">Asset Out</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-success">Update Discrepancy</button>
-                  </div>
-                </div>
-              </div>
-            </div>
 
             <div class='content-backdrop fade'></div>
           </div>
@@ -860,7 +694,7 @@
     <script src='../assets/js/main.js'></script>
 
     <!-- Page JS -->
-    <script src='../assets/js/admin-management/admin-management-asset-audit-detail.js'></script>
+    <script src='../assets/js/admin-management/admin-management-asset-moving.js'></script>
   </body>
 </html>
 
