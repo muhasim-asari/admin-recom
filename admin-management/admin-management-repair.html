@@ -15,7 +15,7 @@
       content='width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0'
     />
 
-    <title>Asset Disposal - Admin Recom</title>
+    <title>Repair - Admin Recom</title>
 
     <meta
       name='description'
@@ -387,7 +387,7 @@
             <li class='menu-header fw-light mt-4'>
               <span class='menu-header-text'>Disposal</span>
             </li>
-            <li class='menu-item active'>
+            <li class='menu-item'>
               <a href='./admin-management-asset-disposal.html' class='menu-link'>
                 <i
                   class='menu-icon tf-icons mdi mdi-minus-circle-outline'
@@ -399,7 +399,7 @@
             <li class='menu-header fw-light mt-4'>
               <span class='menu-header-text'>Repair</span>
             </li>
-            <li class='menu-item'>
+            <li class='menu-item active'>
               <a href='./admin-management-repair.html' class='menu-link'>
                 <i
                   class='menu-icon tf-icons mdi mdi-cog-outline'
@@ -530,8 +530,8 @@
                       <select id="status" class="form-select text-capitalize">
                         <option value="">All Status</option>
                         <option value="waiting approval">Waiting Approval</option>
-                        <option value="waiting asset disposal">Waiting Asset Disposal</option>
-                        <option value="reject">Reject</option>
+                        <option value="waiting asset disposal">Waiting Asset Repair</option>
+                        <option value="disapprove">Disapprove</option>
                         <option value="waiting completed">Waiting Completed</option>
                         <option value="complete">Complete</option>
                       </select>
@@ -539,13 +539,13 @@
                   </div>
                 </div>
                 <div class='card-datatable table-responsive'>
-                  <table class='datatables-asset-disposal table'>
+                  <table class='datatables-asset-repair table'>
                     <thead class='table-light'>
                       <tr>
-                        <th>Asset Disposal Created Date</th>
+                        <th>Asset Repair Created Date</th>
                         <th>Transaction Number</th>
                         <th>Person In Charge</th>
-                        <th>Asset Disposal Date</th>
+                        <th>Asset Repair Date</th>
                         <th>Action</th>
                       </tr>
                     </thead>
@@ -600,7 +600,7 @@
     <script src='../assets/js/main.js'></script>
 
     <!-- Page JS -->
-    <script src='../assets/js/admin-management/admin-management-asset-disposal.js'></script>
+    <script src='../assets/js/admin-management/admin-management-asset-repair.js'></script>
   </body>
 </html>
 

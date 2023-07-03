@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html
   lang='en'
@@ -15,7 +15,7 @@
       content='width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0'
     />
 
-    <title>Asset Disposal - Admin Recom</title>
+    <title>Maintenance Group - Admin Recom</title>
 
     <meta
       name='description'
@@ -90,13 +90,17 @@
       rel='stylesheet'
       href='../assets/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.css'
     />
-    <link rel='stylesheet' href='../assets/vendor/libs/select2/select2.css' />
+    <!-- <link rel='stylesheet' href='../assets/vendor/libs/select2/select2.css' /> -->
+    <link
+      rel='stylesheet'
+      href='../assets/vendor/libs/bootstrap-select/bootstrap-select.css'
+    />
 
     <!-- Toastr -->
-    <link rel="stylesheet" href="../assets/vendor/libs/toastr/toastr.css" />
+    <link rel='stylesheet' href='../assets/vendor/libs/toastr/toastr.css' />
     <link
-      rel="stylesheet"
-      href="../assets/vendor/libs/animate-css/animate.css"
+      rel='stylesheet'
+      href='../assets/vendor/libs/animate-css/animate.css'
     />
 
     <!-- Page CSS -->
@@ -150,7 +154,7 @@
             <li class='menu-header fw-light mt-4'>
               <span class='menu-header-text'>Master Data</span>
             </li>
-            <li class="menu-item open">
+            <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons mdi mdi-database-outline"></i>
                 <div data-i18n="Asset">Asset</div>
@@ -387,7 +391,7 @@
             <li class='menu-header fw-light mt-4'>
               <span class='menu-header-text'>Disposal</span>
             </li>
-            <li class='menu-item active'>
+            <li class='menu-item'>
               <a href='./admin-management-asset-disposal.html' class='menu-link'>
                 <i
                   class='menu-icon tf-icons mdi mdi-minus-circle-outline'
@@ -407,7 +411,7 @@
                 <div data-i18n='Repair'>Repair</div>
               </a>
             </li>
-            <li class="menu-item">
+            <li class="menu-item open">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons mdi mdi-wrench-clock-outline"></i>
                 <div data-i18n="Periodic Maintenance">Periodic Maintenance</div>
@@ -418,7 +422,7 @@
                     <div data-i18n="Asset Maintenance">Asset Maintenance</div>
                   </a>
                 </li>
-                <li class="menu-item">
+                <li class="menu-item active">
                   <a href="./admin-management-repair-maintenance-group.html" class="menu-link">
                     <div data-i18n="Maintenance Group">Maintenance Group</div>
                   </a>
@@ -452,7 +456,6 @@
               class='navbar-nav-right d-flex align-items-center'
               id='navbar-collapse'
             >
-
               <ul class='navbar-nav flex-row align-items-center ms-auto'>
                 <!-- User -->
                 <li class='nav-item navbar-dropdown dropdown-user dropdown'>
@@ -473,7 +476,7 @@
                     <li>
                       <a
                         class='dropdown-item'
-                        href='#'
+                        href='pages-account-settings-account.html'
                       >
                         <div class='d-flex'>
                           <div class='flex-shrink-0 me-3'>
@@ -496,11 +499,7 @@
                       <div class='dropdown-divider'></div>
                     </li>
                     <li>
-                      <a
-                        class='dropdown-item'
-                        href='../'
-                        target='_blank'
-                      >
+                      <a class='dropdown-item' href='../' target='_blank'>
                         <i class='mdi mdi-logout me-2'></i>
                         <span class='align-middle'>Log Out</span>
                       </a>
@@ -510,48 +509,74 @@
                 <!--/ User -->
               </ul>
             </div>
-
           </nav>
-
           <!-- / Navbar -->
 
           <!-- Content wrapper -->
           <div class='content-wrapper'>
+            <!-- Content -->
 
             <div class='container-xxl flex-grow-1 container-p-y'>
-              <!-- Master Branch List Table -->
-              <div class='card'>
-                <div class="card-header">
-                  <h5 class="card-title">Filter</h5>
-                  <div
-                    class="d-flex justify-content-between align-items-center row gap-3 gap-md-0"
+              <h4 class='fw-bold py-3 mb-4'>
+                <span class='text-muted fw-bold'
+                  ><a href='./admin-management-repair-maintenance-group.html'
+                    >Maintenance Group /</a
                   >
-                    <div class="col-md-4">
-                      <select id="status" class="form-select text-capitalize">
-                        <option value="">All Status</option>
-                        <option value="waiting approval">Waiting Approval</option>
-                        <option value="waiting asset disposal">Waiting Asset Disposal</option>
-                        <option value="reject">Reject</option>
-                        <option value="waiting completed">Waiting Completed</option>
-                        <option value="complete">Complete</option>
-                      </select>
+                  Printer Maintenance</span
+                >
+              </h4>
+
+              <div class='card mb-4'>
+                <form
+                  id='createAssetCategory'
+                  class='card-body'
+                  action='javascript:void(0);'
+                >
+                  <div class='row g-4'>
+                    <div class='col-md-12'>
+                      <div class='form-floating form-floating-outline'>
+                        <input
+                          type='text'
+                          class='form-control'
+                          id='maintGroupName'
+                          placeholder='Printer Maintenance'
+                          name='maintGroupName'
+                          value='Printer Maintenance'
+                          aria-label='maintGroupName'
+                        />
+                        <label for='maintGroupName'>Maintenance Group Name</label>
+                      </div>
+                    </div>
+                    <div class='col-md-12'>
+                      <div class='form-floating form-floating-outline'>
+                        <input
+                          type='number'
+                          class='form-control'
+                          id='maintPeriod'
+                          placeholder='10000'
+                          name='maintPeriod'
+                          value='10000'
+                          aria-label='maintPeriod'
+                        />
+                        <label for='maintPeriod'>Maintenance Period (KM)</label>
+                      </div>
+                    </div>
+                    <div class='col-md-12'>
+                      <div class="form-floating form-floating-outline">
+                        <textarea class="form-control h-px-100" id="description" placeholder="Add Description Here ...">Servis printer untuk setiap printer yang sudah mencapai 10 jam</textarea>
+                        <label for="description">Description</label>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class='card-datatable table-responsive'>
-                  <table class='datatables-asset-disposal table'>
-                    <thead class='table-light'>
-                      <tr>
-                        <th>Asset Disposal Created Date</th>
-                        <th>Transaction Number</th>
-                        <th>Person In Charge</th>
-                        <th>Asset Disposal Date</th>
-                        <th>Action</th>
-                      </tr>
-                    </thead>
-                  </table>
-                </div>
-
+                  <div class='pt-4 float-end'>
+                    <button type='submit' class='btn btn-primary me-sm-3 me-1'>
+                      Update Maintenance Group
+                    </button>
+                    <button type='reset' class='btn btn-label-secondary'>
+                      Cancel
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
             <!-- / Content -->
@@ -589,18 +614,23 @@
     <!-- Vendors JS -->
     <script src='../assets/vendor/libs/moment/moment.js'></script>
     <script src='../assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js'></script>
-    <script src='../assets/vendor/libs/select2/select2.js'></script>
+    <!-- <script src='../assets/vendor/libs/select2/select2.js'></script> -->
+    <script src='../assets/vendor/libs/formvalidation/dist/js/FormValidation.min.js'></script>
+    <script src='../assets/vendor/libs/formvalidation/dist/js/plugins/Bootstrap5.min.js'></script>
+    <script src='../assets/vendor/libs/formvalidation/dist/js/plugins/AutoFocus.min.js'></script>
     <script src='../assets/vendor/libs/cleavejs/cleave.js'></script>
+    <script src='../assets/vendor/libs/bootstrap-select/bootstrap-select.js'></script>
+
     <script src='../assets/vendor/libs/cleavejs/cleave-phone.js'></script>
 
     <!-- Toastr -->
-    <script src="../assets/vendor/libs/toastr/toastr.js"></script>
+    <script src='../assets/vendor/libs/toastr/toastr.js'></script>
 
     <!-- Main JS -->
     <script src='../assets/js/main.js'></script>
 
     <!-- Page JS -->
-    <script src='../assets/js/admin-management/admin-management-asset-disposal.js'></script>
+    <script src='../assets/js/admin-management/admin-management-master-data-asset-category.js'></script>
   </body>
 </html>
 

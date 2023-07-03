@@ -15,7 +15,7 @@
       content='width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0'
     />
 
-    <title>Asset Disposal - Admin Recom</title>
+    <title>Repair Maintenance Group - Admin Recom</title>
 
     <meta
       name='description'
@@ -150,13 +150,13 @@
             <li class='menu-header fw-light mt-4'>
               <span class='menu-header-text'>Master Data</span>
             </li>
-            <li class="menu-item open">
+            <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons mdi mdi-database-outline"></i>
                 <div data-i18n="Asset">Asset</div>
               </a>
               <ul class="menu-sub">
-                <li class="menu-item">
+                <li class="menu-item ">
                   <a href="./admin-management-master-data-asset-category.html" class="menu-link">
                     <div data-i18n="Asset Category">Asset Category</div>
                   </a>
@@ -387,7 +387,7 @@
             <li class='menu-header fw-light mt-4'>
               <span class='menu-header-text'>Disposal</span>
             </li>
-            <li class='menu-item active'>
+            <li class='menu-item'>
               <a href='./admin-management-asset-disposal.html' class='menu-link'>
                 <i
                   class='menu-icon tf-icons mdi mdi-minus-circle-outline'
@@ -407,7 +407,7 @@
                 <div data-i18n='Repair'>Repair</div>
               </a>
             </li>
-            <li class="menu-item">
+            <li class="menu-item open">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons mdi mdi-wrench-clock-outline"></i>
                 <div data-i18n="Periodic Maintenance">Periodic Maintenance</div>
@@ -418,7 +418,7 @@
                     <div data-i18n="Asset Maintenance">Asset Maintenance</div>
                   </a>
                 </li>
-                <li class="menu-item">
+                <li class="menu-item active">
                   <a href="./admin-management-repair-maintenance-group.html" class="menu-link">
                     <div data-i18n="Maintenance Group">Maintenance Group</div>
                   </a>
@@ -519,33 +519,15 @@
           <div class='content-wrapper'>
 
             <div class='container-xxl flex-grow-1 container-p-y'>
-              <!-- Master Branch List Table -->
+              <!-- Master Currency List Table -->
               <div class='card'>
-                <div class="card-header">
-                  <h5 class="card-title">Filter</h5>
-                  <div
-                    class="d-flex justify-content-between align-items-center row gap-3 gap-md-0"
-                  >
-                    <div class="col-md-4">
-                      <select id="status" class="form-select text-capitalize">
-                        <option value="">All Status</option>
-                        <option value="waiting approval">Waiting Approval</option>
-                        <option value="waiting asset disposal">Waiting Asset Disposal</option>
-                        <option value="reject">Reject</option>
-                        <option value="waiting completed">Waiting Completed</option>
-                        <option value="complete">Complete</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
                 <div class='card-datatable table-responsive'>
-                  <table class='datatables-asset-disposal table'>
+                  <table class='datatables-maintenance-group table'>
                     <thead class='table-light'>
                       <tr>
-                        <th>Asset Disposal Created Date</th>
-                        <th>Transaction Number</th>
-                        <th>Person In Charge</th>
-                        <th>Asset Disposal Date</th>
+                        <th>Maintenance Group Name</th>
+                        <th>Maintenance Period (KM)</th>
+                        <th>Description</th>
                         <th>Action</th>
                       </tr>
                     </thead>
@@ -600,7 +582,7 @@
     <script src='../assets/js/main.js'></script>
 
     <!-- Page JS -->
-    <script src='../assets/js/admin-management/admin-management-asset-disposal.js'></script>
+    <script src='../assets/js/admin-management/admin-management-maintenance-group.js'></script>
   </body>
 </html>
 

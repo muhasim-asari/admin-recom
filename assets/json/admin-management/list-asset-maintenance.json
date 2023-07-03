@@ -1,0 +1,73 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "asset_code": "AS001",
+      "asset_name": "Computer",
+      "total_maintenance_group": 2,
+      "maintenance_group_name": "Hardware",
+      "maintenance_period_km": 5000,
+      "first_maintenance_date": "01-Jan-2023",
+      "last_maintenance_date": "30-Jun-2023",
+      "maintenance_created_date": "15-Feb-2023",
+      "maintenance_approval_date": "20-Feb-2023",
+      "maintenance_date": "25-Feb-2023",
+      "maintenance_completed_date": "26-Feb-2023",
+      "status": "Complete",
+      "person_in_charge": {
+        "id": 1,
+        "company": "ABC Corporation",
+        "department": "IT",
+        "division": "Hardware Maintenance",
+        "employee": "John Doe"
+      },
+      "description": "Perform regular maintenance tasks on computer hardware components."
+    },
+    {
+      "id": 2,
+      "asset_code": "AS002",
+      "asset_name": "Printer",
+      "total_maintenance_group": 1,
+      "maintenance_group_name": "Printer Maintenance",
+      "maintenance_period_km": 10000,
+      "first_maintenance_date": "01-Apr-2023",
+      "last_maintenance_date": "30-Jun-2023",
+      "maintenance_created_date": "10-May-2023",
+      "maintenance_approval_date": "15-May-2023",
+      "maintenance_date": "20-May-2023",
+      "maintenance_completed_date": "",
+      "status": "Waiting Maintenance",
+      "person_in_charge": {
+        "id": 2,
+        "company": "XYZ Corporation",
+        "department": "IT",
+        "division": "Printer Support",
+        "employee": "Jane Smith"
+      },
+      "description": "Troubleshoot printer issues and perform maintenance tasks as needed."
+    },
+    {
+      "id": 3,
+      "asset_code": "AS003",
+      "asset_name": "Server",
+      "total_maintenance_group": 3,
+      "maintenance_group_name": "Server Maintenance",
+      "maintenance_period_km": 20000,
+      "first_maintenance_date": "01-Jan-2023",
+      "last_maintenance_date": "31-Dec-2023",
+      "maintenance_created_date": "05-Mar-2023",
+      "maintenance_approval_date": "10-Mar-2023",
+      "maintenance_date": "",
+      "maintenance_completed_date": "",
+      "status": "Waiting Maintenance",
+      "person_in_charge": {
+        "id": 3,
+        "company": "DEF Corporation",
+        "department": "IT",
+        "division": "Server Administration",
+        "employee": "Mark Johnson"
+      },
+      "description": "Perform regular maintenance tasks on server hardware and software."
+    }
+  ]
+}

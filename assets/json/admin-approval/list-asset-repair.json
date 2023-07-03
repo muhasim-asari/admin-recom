@@ -20,12 +20,12 @@
       "asset_repair_created_date": "13-June-2023",
       "asset_repair_approval_date": "15-June-2023",
       "transaction_number": "TRN-002",
-      "status": "Reject",
+      "status": "Disapprove",
       "person_in_charge": {
         "department": "Finance Department",
         "name": "Jane Smith"
       },
-      "asset_repair_date": "17-June-2023",
+      "asset_repair_date": "Waiting Repair",
       "asset_repair_completed_date": "",
       "asset_destination": "Warehouse",
       "information": "Waiting for repair request to be approved"
@@ -40,7 +40,7 @@
         "department": "HR Department",
         "name": "David Johnson"
       },
-      "asset_repair_date": "",
+      "asset_repair_date": "Waiting Repair",
       "asset_repair_completed_date": "",
       "asset_destination": "",
       "information": "Waiting for repair request to be approved"
@@ -70,7 +70,7 @@
         "department": "Marketing Department",
         "name": "Mark Davis"
       },
-      "asset_repair_date": "",
+      "asset_repair_date": "Waiting Repair",
       "asset_repair_completed_date": "",
       "asset_destination": "Office Room",
       "information": "Waiting for repair request to be processed"
@@ -85,7 +85,7 @@
         "department": "Sales Department",
         "name": "Emily Wilson"
       },
-      "asset_repair_date": "",
+      "asset_repair_date": "Waiting Repair",
       "asset_repair_completed_date": "",
       "asset_destination": "Conference Room",
       "information": "Waiting for repair request to be approved"
