@@ -5,6 +5,16 @@
       "location_name": "Warehouse A",
       "description": "Main warehouse for storing finished goods",
       "status": "active",
+      "total_asset": {
+        "total": 0,
+        "tags": 0,
+        "wo_tags": 0
+      },
+      "physical_check": 0,
+      "repair": 0,
+      "asset_out": 0,
+      "disposal": 0,
+      "available": 0,
       "sub_locations": [
         {
           "id": 1,
@@ -31,6 +41,16 @@
       "location_name": "Storage Room",
       "description": "Small room for storing office supplies",
       "status": "active",
+      "total_asset": {
+        "total": 0,
+        "tags": 0,
+        "wo_tags": 0
+      },
+      "physical_check": 0,
+      "repair": 0,
+      "asset_out": 0,
+      "disposal": 0,
+      "available": 0,
       "sub_locations": [
         {
           "id": 1,
@@ -67,6 +87,16 @@
       "location_name": "Server Room",
       "description": "Secured room for housing servers and network equipment",
       "status": "active",
+      "total_asset": {
+        "total": 0,
+        "tags": 0,
+        "wo_tags": 0
+      },
+      "physical_check": 0,
+      "repair": 0,
+      "asset_out": 0,
+      "disposal": 0,
+      "available": 0,
       "sub_locations": [
         {
           "id": 2,
@@ -107,6 +137,16 @@
       "location_name": "Office Room 101",
       "description": "First-floor office room for department A",
       "status": "inactive",
+      "total_asset": {
+        "total": 0,
+        "tags": 0,
+        "wo_tags": 0
+      },
+      "physical_check": 0,
+      "repair": 0,
+      "asset_out": 0,
+      "disposal": 0,
+      "available": 0,
       "sub_locations": []
     },
     {
@@ -114,6 +154,16 @@
       "location_name": "Warehouse C",
       "description": "",
       "status": "",
+      "total_asset": {
+        "total": 0,
+        "tags": 0,
+        "wo_tags": 0
+      },
+      "physical_check": 0,
+      "repair": 0,
+      "asset_out": 0,
+      "disposal": 0,
+      "available": 0,
       "sub_locations": [
         {
           "id": 3,
@@ -136,6 +186,16 @@
       "location_name": "Warehouse D",
       "description": "",
       "status": "",
+      "total_asset": {
+        "total": 0,
+        "tags": 0,
+        "wo_tags": 0
+      },
+      "physical_check": 0,
+      "repair": 0,
+      "asset_out": 0,
+      "disposal": 0,
+      "available": 0,
       "sub_locations": [
         {
           "id": 6,

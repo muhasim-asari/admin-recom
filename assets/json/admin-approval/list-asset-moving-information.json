@@ -1,0 +1,85 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "asset_code": "AS001",
+      "asset_name": "Laptop",
+      "asset_category": "Electronics",
+      "asset_group": "IT Equipment",
+      "status_approval_asset_moving": "Approve",
+      "status_moving_asset": "Done Moving"
+    },
+    {
+      "id": 2,
+      "asset_code": "AS002",
+      "asset_name": "Printer",
+      "asset_category": "Electronics",
+      "asset_group": "Office Equipment",
+      "status_approval_asset_moving": "Disapprove",
+      "status_moving_asset": "Not Yet"
+    },
+    {
+      "id": 3,
+      "asset_code": "AS003",
+      "asset_name": "Projector",
+      "asset_category": "Electronics",
+      "asset_group": "Presentation Equipment",
+      "status_approval_asset_moving": "Approve",
+      "status_moving_asset": "Waiting Moving Approval"
+    },
+    {
+      "id": 4,
+      "asset_code": "AS004",
+      "asset_name": "Desk",
+      "asset_category": "Furniture",
+      "asset_group": "Office Furniture",
+      "status_approval_asset_moving": "Approve",
+      "status_moving_asset": "Done Moving"
+    },
+    {
+      "id": 5,
+      "asset_code": "AS005",
+      "asset_name": "Chair",
+      "asset_category": "Furniture",
+      "asset_group": "Office Furniture",
+      "status_approval_asset_moving": "Approve",
+      "status_moving_asset": "Done Moving"
+    },
+    {
+      "id": 6,
+      "asset_code": "AS006",
+      "asset_name": "Server",
+      "asset_category": "Electronics",
+      "asset_group": "IT Equipment",
+      "status_approval_asset_moving": "Disapprove",
+      "status_moving_asset": "Not Yet"
+    },
+    {
+      "id": 7,
+      "asset_code": "AS007",
+      "asset_name": "Conference Table",
+      "asset_category": "Furniture",
+      "asset_group": "Meeting Room Furniture",
+      "status_approval_asset_moving": "Approve",
+      "status_moving_asset": "Done Moving"
+    },
+    {
+      "id": 8,
+      "asset_code": "AS008",
+      "asset_name": "Whiteboard",
+      "asset_category": "Office Supplies",
+      "asset_group": "Stationery",
+      "status_approval_asset_moving": "Approve",
+      "status_moving_asset": "Waiting Moving Approval"
+    },
+    {
+      "id": 9,
+      "asset_code": "AS009",
+      "asset_name": "Cabinet",
+      "asset_category": "Furniture",
+      "asset_group": "Office Furniture",
+      "status_approval_asset_moving": "Approve",
+      "status_moving_asset": "Done Moving"
+    }
+  ]
+}

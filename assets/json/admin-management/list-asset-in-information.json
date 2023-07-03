@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "assetName": "Asset A",
+      "quantity": 10,
+      "assetOrigin": ["Origin A", "Origin B"]
+    },
+    {
+      "id": 2,
+      "assetName": "Asset B",
+      "quantity": 5,
+      "assetOrigin": ["Origin C"]
+    },
+    {
+      "id": 3,
+      "assetName": "Asset C",
+      "quantity": 3,
+      "assetOrigin": ["Origin D", "Origin E", "Origin F"]
+    }
+  ]
+}

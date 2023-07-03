@@ -85,25 +85,22 @@ $(function () {
   });
 });
 
-// Mendapatkan elemen yang diperlukan
-var editAssetMatch = document.getElementById('editAssetMatch');
-var seeAssetMatch = document.getElementById('seeAssetMatch');
-var wrapperInputAssetMatch = document.getElementById('wrapperInputAssetMatch');
-var wrapperInfoAssetMatch = document.getElementById('wrapperInfoAssetMatch');
+function enableEditMode() {
+  var inputAssetMatch = document.getElementById('inputAssetMatch');
+  var editAssetMatch = document.getElementById('editAssetMatch');
+  var doneAssetMatch = document.getElementById('doneAssetMatch');
+  
+  inputAssetMatch.disabled = false;  // Mengaktifkan input
+  editAssetMatch.style.display = 'none';  // Menyembunyikan tombol edit
+  doneAssetMatch.style.display = '';  // Menampilkan tombol done
+}
 
-// Menambahkan event listener untuk menghandle saat editAssetMatch diklik
-editAssetMatch.addEventListener('click', function() {
-  // Menampilkan wrapperInputAssetMatch
-  wrapperInputAssetMatch.style.display = 'block';
-  // Menyembunyikan wrapperInfoAssetMatch
-  wrapperInfoAssetMatch.style.display = 'none';
-});
-
-// Menambahkan event listener untuk menghandle saat seeAssetMatch diklik
-seeAssetMatch.addEventListener('click', function() {
-  // Menampilkan wrapperInfoAssetMatch
-  wrapperInfoAssetMatch.style.display = 'block';
-  // Menyembunyikan wrapperInputAssetMatch
-  wrapperInputAssetMatch.style.display = 'none';
-});
-
+function disableEditMode() {
+  var inputAssetMatch = document.getElementById('inputAssetMatch');
+  var editAssetMatch = document.getElementById('editAssetMatch');
+  var doneAssetMatch = document.getElementById('doneAssetMatch');
+  
+  inputAssetMatch.disabled = true;  // Menonaktifkan input
+  doneAssetMatch.style.display = 'none';  // Menyembunyikan tombol done
+  editAssetMatch.style.display = '';  // Menampilkan tombol edit
+}

@@ -60,7 +60,7 @@ $(function () {
 
             return (
               "<div>" +
-              "<a href='./admin-approval-asset-moving-detail.html'>" +
+              "<a href='./admin-management-asset-moving-detail.html'>" +
               row.transaction_number +
               "</a>" +
               "<br/>" +
